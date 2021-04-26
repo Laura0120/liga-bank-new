@@ -1,0 +1,129 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.calculator__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator__step {
+  border: none;
+  @include font(16px, 22.5px, 500);
+  padding: 30px 0 40px;
+  margin: 0;
+
+  &--3 {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+
+.calculator__input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+}
+
+.calculator__step label {
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+.calculator__input--price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator__price-button {
+  width: 10%;
+  border: 0;
+  background-color: transparent;
+
+  &--decrement {
+    background: url('../../img/decrement.svg') no-repeat center;
+  }
+
+  &--increment {
+    background: url('../../img/increment.svg') no-repeat center;
+  }
+}
+
+.calculator__range {
+  height: max-content;
+  padding: 15px 0 8px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.calculator__range-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator__label {
+  @include font(14px, 20px, $color: $grey);
+}
+
+.calculator__type-option {
+  position: relative;
+  height: 60px;
+  &::before {
+    width: 50px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .calculator__step--3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .calculator__step legend {
+    @include font(18px, 25px, 500);
+  }
+
+  .calculator__input-wrapper {
+    &:not(:last-child) {
+      padding-bottom: 25px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .calculator {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .calculator__wrapper {
+    width: 50%;
+  }
+
+  .calculator__input-wrapper {
+    &:not(:last-child) {
+      padding-bottom: 30px;
+    }
+  }
+
+  .calculator__step legend {
+    @include font(22px, 31px, 500);
+  }
+}
+
+@media (min-width: $desktop-width-end) {
+  .calculator__wrapper {
+    width: 51.3%;
+  }
+}

@@ -1,0 +1,141 @@
+.navigation--closed {
+  display: none;
+}
+
+.navigation__toggle {
+  padding: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  z-index: 3;
+
+  &--closed {
+    position: absolute;
+    top: 17px;
+    left: 13px;
+    width: 20px;
+    height: 14px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 1px;
+      background-color: $dark-grey;
+      box-shadow: 0 4.5px 0 0 $dark-grey, 0 9px 0 0 $dark-grey;
+    }
+  }
+
+  &--open {
+    position: absolute;
+    top: 14px;
+    right: 13px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  @include list-reset();
+
+  &--footer {
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 144px;
+    min-height: 107px;
+    margin: 29px 0;
+  }
+}
+
+.navigation__item {
+  &--header:nth-child(5) {
+    display: none;
+  }
+
+  &--footer:nth-child(3) {
+    display: none;
+  }
+}
+
+.navigation__item a {
+  color: $dark-grey;
+  text-decoration: none;
+
+  &:active {
+    color: blue;
+  }
+}
+
+.navigation__list--footer a {
+  font-weight: 500;
+}
+
+@media (max-width: $mobile-width-only) {
+  .navigation__list--header {
+    flex-direction: column;
+  }
+
+  .navigation__item {
+    width: 100%;
+    text-align: start;
+  }
+
+  .navigation--header {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 32px $side-padding-mobile 0;
+    height: 60vh;
+    background-color: $light-lilac;
+  }
+
+  .navigation--header .navigation__item {
+    padding: 25px 15px;
+    border-top: 1px solid #c1c2ca;
+    &:last-child {
+      border-bottom: 1px solid #c1c2ca;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .navigation__toggle {
+    display: none;
+  }
+  .navigation {
+    &--header {
+      display: block;
+    }
+  }
+
+  .navigation__item:not(.navigation__item--footer) {
+    margin-right: 20px;
+  }
+
+  .navigation__item a {
+    @include font(14px, 16px);
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .navigation__list {
+    &--footer {
+      min-width: 144px;
+      min-height: 107px;
+      margin: 0;
+    }
+  }
+
+  .navigation__item:not(.navigation__item--footer) {
+    margin-right: 25px;
+  }
+
+  .navigation__item a {
+    @include font(16px, 19px);
+  }
+}

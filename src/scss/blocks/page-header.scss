@@ -1,0 +1,31 @@
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  min-width: $mobile-width;
+  padding: 0 5.9%;
+  margin: 0 auto;
+  background-color: $light-lilac;
+}
+.page-header .logo {
+  margin-left: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    min-height: 69px;
+    padding: 0 5.9%;
+  }
+  .page-header .logo {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .page-header {
+    width: 100%;
+    min-height: 92px;
+  }
+}

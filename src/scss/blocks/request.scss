@@ -1,0 +1,82 @@
+.request {
+  width: 100%;
+  padding: 48px 15px;
+  margin: 0 auto;
+}
+
+.request h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.request__data {
+  width: 100%;
+}
+
+.request__data tr {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 20px 0;
+}
+
+.request__data th {
+  &:first-child {
+    @include font(16px, 23px, 500);
+  }
+
+  &:last-child {
+    @include font(18px, 25px, 500);
+    order: -1;
+  }
+}
+
+.request__button {
+  width: 100%;
+  padding: 20px 60px;
+  margin-top: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .request h2 {
+    @include font(18px, 25px, 500);
+  }
+
+  .request {
+    padding: 60px 0;
+  }
+
+  .request__data tr {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+
+  .request__data th {
+    &:last-child {
+      order: 1;
+    }
+  }
+
+  .request__button {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .request h2 {
+    @include font(22px, 31px, 500);
+  }
+
+  .request {
+    width: 770px;
+    padding: 70px;
+    background-color: $light-lilac;
+  }
+
+  .request__button {
+    width: max-content;
+    margin: 40px auto 0;
+  }
+}

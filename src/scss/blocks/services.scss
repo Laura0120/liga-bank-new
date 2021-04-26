@@ -1,0 +1,226 @@
+.services {
+  width: 100%;
+}
+
+.services__tabs {
+  display: none;
+}
+
+.services__page {
+  padding: 60px $side-padding-mobile 10px;
+  background: $light-lilac no-repeat 100% 35%;
+
+  &--contributions {
+    background-image: url('../../img/contributions-phone.jpg');
+  }
+  &--credits {
+    background-image: url('../../img/credits-phone.jpg');
+
+    .services__button {
+      display: none;
+    }
+
+    a {
+      color: $dark-grey;
+    }
+  }
+  &--insurance {
+    background-image: url('../../img/insurance-phone.jpg');
+  }
+  &--online-services {
+    background-image: url('../../img/online-services-phone.jpg');
+  }
+}
+
+.services__wrappper {
+  width: $mobile-width;
+}
+
+.services__title {
+  margin: 0 0 30px;
+  @include font(16px, 23px, 500);
+}
+
+.services__content-list {
+  @include list-reset();
+  margin: 0 0 10px;
+  padding-right: 57px;
+}
+
+.services__content-list li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    background: url('../../img/check-mark.svg') no-repeat center;
+    top: 7px;
+    left: 0;
+  }
+}
+
+.services__button {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 17px 0;
+  margin-bottom: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .services__page {
+    padding: 60px $side-padding-tablet 15px;
+    background-position: 94% 50%;
+
+    &--contributions {
+      background-image: url('../../img/contributions-tablet.jpg');
+    }
+    &--credits {
+      background-image: url('../../img/credits-tablet.jpg');
+    }
+    &--insurance {
+      background-image: url('../../img/insurance-tablet.jpg');
+    }
+    &--online-services {
+      background-image: url('../../img/online-services-tablet.jpg');
+    }
+  }
+
+  .services__wrappper {
+    width: 380px;
+  }
+
+  .services__content-list {
+    padding-right: 0;
+  }
+
+  .services__title {
+    @include font(18px, 25px, 500);
+  }
+
+  .services__button {
+    width: max-content;
+    padding: 18px 30px;
+    margin-bottom: 58px;
+  }
+
+  .services__content-list li {
+    padding-left: 21px;
+    margin-bottom: 25px;
+
+    &::before {
+      width: 11px;
+      height: 8px;
+      top: 6px;
+      background-size: contain;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .services {
+    padding: 60px $side-padding-desktop 0;
+  }
+
+  .services__tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .services-tabs__item {
+    width: 25%;
+    text-align: center;
+    padding: 40px 0;
+    text-decoration: none;
+    @include font(18px, 21px, 500);
+
+    &--active {
+      background-color: $light-lilac;
+    }
+  }
+
+  .services-tabs__item span {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .services-tabs__item {
+    &--contributions span {
+      padding-left: 44px;
+      &::before {
+        width: 34px;
+        height: 33px;
+        top: -4px;
+        background-image: url('../../img/vault-icon.svg');
+      }
+    }
+
+    &--credits span {
+      padding-left: 44px;
+      &::before {
+        width: 34px;
+        height: 30px;
+        top: -4px;
+        background-image: url('../../img/cards-icon.svg');
+      }
+    }
+    &--insurance span {
+      padding-left: 38px;
+      &::before {
+        width: 28px;
+        height: 34px;
+        top: -7px;
+        background-image: url('../../img/security-icon.svg');
+      }
+    }
+    &--online-services span {
+      padding-left: 30px;
+      &::before {
+        width: 20px;
+        height: 34px;
+        top: -7px;
+        background-image: url('../../img/phone-icon.svg');
+      }
+    }
+  }
+
+  .services__page {
+    padding: 60px 70px;
+    background-position: 88% 50%;
+
+    &--contributions {
+      background-image: url('../../img/contributions-desktop.jpg');
+    }
+    &--credits {
+      background-image: url('../../img/credits-desktop.jpg');
+    }
+    &--insurance {
+      background-image: url('../../img/insurance-desktop.jpg');
+    }
+    &--online-services {
+      background-image: url('../../img/online-services-desktop.jpg');
+    }
+  }
+  .services__wrappper {
+    width: 400px;
+  }
+
+  .services__title {
+    @include font(22px, 31px, 500);
+  }
+
+  .services__button {
+    padding: 20px 30px;
+
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,60 @@
+.offer {
+  width: 100%;
+  padding: 40px 15px;
+  background-color: $light-lilac;
+  @include font(18px, 25px, 500);
+  height: max-content;
+}
+
+.offer h3 {
+  margin: 0;
+}
+
+.offer__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  margin: 0;
+}
+
+.offer__content dd {
+  margin: 0;
+  @include font(16px, 22.5px, 400);
+  padding-bottom: 35px;
+}
+
+.offer__button {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .offer {
+    padding: 60px;
+    @include font(22px, 31px, 500);
+  }
+
+  .offer__content {
+    max-height: 226px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+
+  .offer__content dd {
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .offer {
+    padding: 60px 30px;
+    width: 47%;
+  }
+}
+
+@media (min-width: $desktop-width-end) {
+  .offer {
+    padding: 60px 60px;
+    width: 42.7%;
+  }
+}
