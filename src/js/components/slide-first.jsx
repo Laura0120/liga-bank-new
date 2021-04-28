@@ -7,14 +7,14 @@ const SlideFirst = () => {
       <p className="slider__text slider__text--first ">
         Кредиты на любой случай
       </p>
-      <a 
+      <a
         className="slider__button slider__button--first button"
         href="#"
-        onClick={(evt)=>{
+        onClick={(evt) => {
           evt.preventDefault();
-          document.querySelector('.credit-block').scrollIntoView()
+          document.querySelector(".credit-block").scrollIntoView();
         }}
-        >
+      >
         Рассчитать кредит
       </a>
     </div>
@@ -22,4 +22,3 @@ const SlideFirst = () => {
 };
 
 export default SlideFirst;
-

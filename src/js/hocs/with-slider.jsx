@@ -7,27 +7,36 @@ const withSlider = (Component) => {
     const [currentPageIndex, setCurrentPage] = useState(0);
 
     const onGetNextPage = (directionSide) => {
-      if(directionSide==='right'){
+      if (directionSide === "right") {
         currentPageIndex < SLIDER_PAGES.length - 1
-        ? setCurrentPage(currentPageIndex + 1)
-        : setCurrentPage(0);
+          ? setCurrentPage(currentPageIndex + 1)
+          : setCurrentPage(0);
       }
-      if(directionSide==='left'){
-        currentPageIndex !== 0 
+      if (directionSide === "left") {
+        currentPageIndex !== 0
           ? setCurrentPage(currentPageIndex - 1)
           : setCurrentPage(SLIDER_PAGES.length - 1);
       }
     };
 
     useEffect(() => {
-      let slidesСhange = setInterval(()=>{onGetNextPage('right')}, INTERVAL_CHANGES_SLIDE);
+      let slidesСhange = setInterval(() => {
+        onGetNextPage("right");
+      }, INTERVAL_CHANGES_SLIDE);
 
       return () => {
         clearInterval(slidesСhange);
       };
     });
 
-    return <Component {...props} currentPage={SLIDER_PAGES[currentPageIndex]} currentPageIndex={currentPageIndex} onGetNextPage={onGetNextPage}/>;
+    return (
+      <Component
+        {...props}
+        currentPage={SLIDER_PAGES[currentPageIndex]}
+        currentPageIndex={currentPageIndex}
+        onGetNextPage={onGetNextPage}
+      />
+    );
   };
 
   return WithSlider;

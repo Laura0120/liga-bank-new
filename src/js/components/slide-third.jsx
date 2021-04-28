@@ -5,14 +5,14 @@ const SlideThird = () => {
     <div className="slider__content slider__content--third">
       <p className="slider__title">Лига Банк</p>
       <p className="slider__text">Всегда рядом</p>
-      <a 
+      <a
         className="slider__button button"
         href="#"
-        onClick={(evt)=>{
+        onClick={(evt) => {
           evt.preventDefault();
-          document.querySelector('.bank-branchs').scrollIntoView()
+          document.querySelector(".bank-branchs").scrollIntoView();
         }}
-        >
+      >
         Найти отделение
       </a>
     </div>

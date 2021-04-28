@@ -1,10 +1,8 @@
-import { CURRENCIES, DURATION_UNITS} from "./const";
+import { CURRENCIES, DURATION_UNITS } from "./const";
 
-
-export  const disablePageScrolling = () => {
-  document.body.classList.add('no-scrolling');
+export const disablePageScrolling = () => {
+  document.body.classList.add("no-scrolling");
 };
-
 
 export const addSpaces = (num) => {
   return num.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
@@ -12,11 +10,11 @@ export const addSpaces = (num) => {
 
 export const deleteLine = (value, strings) => {
   let startLine = -1;
-  for (let i = 0; i < strings.length; i++ ) {
-    if (value.indexOf(strings[i]) !== -1 ){
-    startLine = value.indexOf(strings[i]);
+  for (let i = 0; i < strings.length; i++) {
+    if (value.indexOf(strings[i]) !== -1) {
+      startLine = value.indexOf(strings[i]);
+    }
   }
-}
   return startLine !== -1
     ? value.substring(0, startLine).split(" ").join("")
     : value.split(" ").join("");
@@ -28,8 +26,7 @@ export const onFocusInput = (evt, strings) => {
 
 export const onBlurInput = (value, strings, line) => {
   deleteLine(value, strings);
-      return addSpaces(value) + line;
- 
+  return addSpaces(value) + line;
 };
 
 export const getSumInitialFee = (price, rate) => {
@@ -37,14 +34,14 @@ export const getSumInitialFee = (price, rate) => {
 };
 
 export const getDurationUnit = (time) => {
-  const lastDigit = String(time)[String(time).length - 1] ;
+  const lastDigit = String(time)[String(time).length - 1];
   const exclusions = [11, 12, 13, 14];
-  const isExclusions = exclusions.includes(time)
-  if(lastDigit === '1' && !isExclusions){
-    return DURATION_UNITS[0]
+  const isExclusions = exclusions.includes(time);
+  if (lastDigit === "1" && !isExclusions) {
+    return DURATION_UNITS[0];
   }
-  if(Number(lastDigit)>= 2 && Number(lastDigit) <= 4 &&  !isExclusions){
-    return DURATION_UNITS[1]
+  if (Number(lastDigit) >= 2 && Number(lastDigit) <= 4 && !isExclusions) {
+    return DURATION_UNITS[1];
   }
-  return DURATION_UNITS[2]
+  return DURATION_UNITS[2];
 };

@@ -1,19 +1,21 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import {disablePageScrolling}  from '../utils'
-import {ACCOUNT}  from '../const'
-import Logo  from './logo'
+import { disablePageScrolling } from "../utils";
+import { ACCOUNT } from "../const";
+import Logo from "./logo";
 
 const ModalSingIn = (props) => {
-  const { setIsModal} = props;
+  const { setIsModal } = props;
   const [isVisiblePassword, setIsVisiblePassword] = useState(false);
   const [account, setAccount] = useState(ACCOUNT);
 
   useEffect(() => {
     disablePageScrolling();
-    window.addEventListener('keydown', onEcsDown);
+    window.addEventListener("keydown", onEcsDown);
     const savedLoginPassword = localStorage.getItem(`loginPassword`);
-    const newLoginPassword = savedLoginPassword ? JSON.parse(savedLoginPassword) : account;
+    const newLoginPassword = savedLoginPassword
+      ? JSON.parse(savedLoginPassword)
+      : account;
     setAccount(newLoginPassword);
   }, []);
 
@@ -22,9 +24,9 @@ const ModalSingIn = (props) => {
   }, [account]);
 
   const onClose = () => {
-    document.body.classList.remove('no-scrolling');
+    document.body.classList.remove("no-scrolling");
     setIsModal(false);
-    document.removeEventListener('keydown', onEcsDown);
+    document.removeEventListener("keydown", onEcsDown);
   };
 
   const onEcsDown = (evt) => {
@@ -36,61 +38,66 @@ const ModalSingIn = (props) => {
 
   const onSubmit = (evt) => {
     evt.preventDefault();
-    onClose()
-  }
+    onClose();
+  };
 
   return (
     <div className="sing-in__modal-sing-in modal-sing-in">
       <Logo />
       <button
-          type="button"
-          className="modal-sing-in__button-close  button-close"
-          aria-label="закрыть форму"
-          onClick={onClose}
-        ></button>
+        type="button"
+        className="modal-sing-in__button-close  button-close"
+        aria-label="закрыть форму"
+        onClick={onClose}
+      ></button>
       <h3 className="visually-hidden">Форма входа в интернет-банк</h3>
       <form onSubmit={onSubmit}>
-        <div className='modal-sing-in__wrapper'>
+        <div className="modal-sing-in__wrapper">
           <label htmlFor="login">Логин</label>
           <input
-            className='modal-sing-in__input input'
-            type='text'
-            id='login'
-            name='login' 
+            className="modal-sing-in__input input"
+            type="text"
+            id="login"
+            name="login"
             autoFocus
             required
             value={account.login}
-            onChange={(evt)=>{
-              setAccount({...account, [evt.target.name]: evt.target.value})
-                }}/>
+            onChange={(evt) => {
+              setAccount({ ...account, [evt.target.name]: evt.target.value });
+            }}
+          />
         </div>
-        <div className='modal-sing-in__wrapper'>
+        <div className="modal-sing-in__wrapper">
           <label htmlFor="password">Пароль</label>
           <input
-            className='modal-sing-in__input input'
-            type={isVisiblePassword ? `text`: `password`}
-            id='password'
-            name='password'
+            className="modal-sing-in__input input"
+            type={isVisiblePassword ? `text` : `password`}
+            id="password"
+            name="password"
             required
             value={account.password}
-            onChange={(evt)=>{
-            setAccount({...account, [evt.target.name]: evt.target.value})
-              }}/>
+            onChange={(evt) => {
+              setAccount({ ...account, [evt.target.name]: evt.target.value });
+            }}
+          />
           <input
             className="visually-hidden modal-sing-in__show-hide-button"
             type="checkbox"
-            id='show-hide'
-            aria-label='показать/скрыть пароль'
-            onChange={()=>setIsVisiblePassword(!isVisiblePassword)}
-            />
-          <label htmlFor='show-hide'></label>          
-          <a href='#' className='modal-sing-in__restore-password'>Забыли пароль?</a>
+            id="show-hide"
+            aria-label="показать/скрыть пароль"
+            onChange={() => setIsVisiblePassword(!isVisiblePassword)}
+          />
+          <label htmlFor="show-hide"></label>
+          <a href="#" className="modal-sing-in__restore-password">
+            Забыли пароль?
+          </a>
         </div>
-        <button className='modal-sing-in__button button' type='submit'>Войти</button>
+        <button className="modal-sing-in__button button" type="submit">
+          Войти
+        </button>
       </form>
     </div>
   );
 };
-
 
 export default ModalSingIn;
