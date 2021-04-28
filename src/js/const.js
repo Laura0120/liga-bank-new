@@ -14,10 +14,14 @@ export const CURRENCIES = [" рублей"];
 export const DURATION_UNITS = [' год', ' года', ' лет'];
 export const MATERNAL_CAPITAL = 470000;
 export const MAX_RATE_OF_INCOME = 45;
+// export const TYPES_CREDIT = [
+//   { key: 'title', description: 'Выберите цель кредита' },
+//   { key: 'mortgage', description: 'Ипотечное кредитование' },
+//   { key: 'car', description: 'Автомобильное кредитование' }
+// ]
 export const TYPES_CREDIT = [
-  { key: 'title', description: 'Выберите цель кредита' },
-  { key: 'mortgage', description: 'Ипотечное кредитование' },
-  { key: 'car', description: 'Автомобильное кредитование' }
+  { value: 'mortgage', label: 'Ипотечное кредитование' },
+  { value: 'car', label: 'Автомобильное кредитование' }
 ]
 
 export const MORTGAGE = {

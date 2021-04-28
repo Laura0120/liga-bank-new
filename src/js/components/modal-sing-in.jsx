@@ -76,14 +76,14 @@ const ModalSingIn = (props) => {
             onChange={(evt)=>{
             setAccount({...account, [evt.target.name]: evt.target.value})
               }}/>
-          <label htmlFor='show-hide'></label>
           <input
-            className="visually-hidden"
+            className="visually-hidden modal-sing-in__show-hide-button"
             type="checkbox"
             id='show-hide'
             aria-label='показать/скрыть пароль'
-            onChange={()=>setIsVisiblePassword(true)}
+            onChange={()=>setIsVisiblePassword(!isVisiblePassword)}
             />
+          <label htmlFor='show-hide'></label>          
           <a href='#' className='modal-sing-in__restore-password'>Забыли пароль?</a>
         </div>
         <button className='modal-sing-in__button button' type='submit'>Войти</button>

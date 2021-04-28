@@ -114,7 +114,7 @@ const CreditParameters = () => {
           <label htmlFor="price">
             Стоимость {type === MORTGAGE.type ? `недвижимости` : `автомобиля`}
           </label>
-          <div className='calculator__input calculator__input--price input'>
+          <div className={`calculator__input  input calculator__input--price ${!isValidPrice? `calculator__input--price-error`:``}`}>
             <button className='calculator__price-button calculator__price-button--decrement' type="button" onClick={onDecrementPrice} />
             <input
               className='input input--price'
@@ -126,11 +126,12 @@ const CreditParameters = () => {
               onInput={onInputPrice}
             />
             <button className='calculator__price-button calculator__price-button--increment' type="button" onClick={onIncrementPrice} />
-          </div>
+            {!isValidPrice && (<span className='calculator__price-error-msg'>Некорректное значение</span>)}
+           </div>
           <span className='calculator__label'>
             От {price.min} до {price.max} {CURRENCIES[0]}
           </span>
-          {!isValidPrice && (<span className='calculator__price-error-msg'>Некорректное значение</span>)}
+          
         </div>
         <div className='calculator__input-wrapper'>
           <label htmlFor="initial-fee">Первоначальный взнос</label>

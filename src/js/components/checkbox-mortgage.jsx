@@ -9,7 +9,7 @@ const CheckboxMortgage = (props) => {
 
   return (
     <div>
-      <input className='calculator__checkbox' type='checkbox' id='capital' checked={isCapital} onChange={(evt) => setIsCapital(evt.target.checked)} />
+      <input className='visually-hidden calculator__checkbox' type='checkbox' id='capital' checked={isCapital} onChange={(evt) => setIsCapital(evt.target.checked)} />
       <label htmlFor='capital'>Использовать материнский капитал</label>  
     </div>
     );

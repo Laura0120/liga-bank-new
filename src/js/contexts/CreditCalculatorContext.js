@@ -89,7 +89,7 @@ export default function CreditCalculatorContextProvider ({ children }) {
   useEffect(() => {    
     const price = Number(deleteLine(currentPrice, CURRENCIES));
     const initialFee = Number(deleteLine(sumInitialFee, CURRENCIES));
-    setAmountCredit( isCapital ? price-initialFee-MATERNAL_CAPITAL: price-initialFee);
+    setAmountCredit( isCapital ? Math.round(price-initialFee-MATERNAL_CAPITAL): Math.round(price-initialFee));
   }, [currentPrice, sumInitialFee, isCapital]);
   
   useEffect(() => {
