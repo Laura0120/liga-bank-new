@@ -1,15 +1,18 @@
-import React, {useState, useEffect} from 'react';
-import {MORTGAGE, USER_DATA}  from '../const'
-import {useCreditCalculatorContext} from "../contexts/CreditCalculatorContext"
-
+import React, { useState, useEffect } from "react";
+import { MORTGAGE, USER_DATA } from "../const";
+import { useCreditCalculatorContext } from "../contexts/CreditCalculatorContext";
 
 const Request = (props) => {
-  const { requestNumber } = props
-  const { parameters: { type },  currentPrice, sumInitialFee, currentDuration } = useCreditCalculatorContext();
+  const { requestNumber } = props;
+  const {
+    parameters: { type },
+    currentPrice,
+    sumInitialFee,
+    currentDuration,
+  } = useCreditCalculatorContext();
 
   const [userData, setUserData] = useState(USER_DATA);
   // const [validity, setValidity] = useState(false);
-
 
   useEffect(() => {
     const savedUserData = localStorage.getItem(`userData`);
@@ -21,15 +24,15 @@ const Request = (props) => {
     localStorage.setItem(`userData`, JSON.stringify(userData));
   }, [userData]);
 
-const onChangeInput = (evt)=>{
-  setUserData({...userData, [evt.target.name]: evt.target.value})
-    }
+  const onChangeInput = (evt) => {
+    setUserData({ ...userData, [evt.target.name]: evt.target.value });
+  };
 
   return (
-    <div  className='calculator__request request' >
+    <div className="calculator__request request">
       <h3>Шаг 3. Оформление заявки</h3>
-      <table className='request__data'>
-        <thead className='visually-hidden'>
+      <table className="request__data">
+        <thead className="visually-hidden">
           <tr>
             <th>Параметр</th>
             <th>Значение</th>
@@ -45,7 +48,9 @@ const onChangeInput = (evt)=>{
             <th>{type === MORTGAGE.type ? `Ипотека` : `Автокредит`}</th>
           </tr>
           <tr>
-            <th>Стоимость {type === MORTGAGE.type ? `недвижимости` : `автомобиля`}</th>
+            <th>
+              Стоимость {type === MORTGAGE.type ? `недвижимости` : `автомобиля`}
+            </th>
             <th>{currentPrice}</th>
           </tr>
           <tr>
@@ -58,18 +63,53 @@ const onChangeInput = (evt)=>{
           </tr>
         </tbody>
       </table>
-      <fieldset className='request__user calculator__step calculator__step--3'>
-        <label className='visually-hidden' htmlFor='name'>Фамилия, имя, отчество</label>
-        <input className='request__input input' type='text' id='name' name='name' value={userData.name} placeholder='ФИО' onChange={onChangeInput} autoFocus required/>
-        <label className='visually-hidden' htmlFor='tel'>Номер телефона</label>
-        <input className='request__input  input input--tel' type='tel' id='tel' name='tel' value={userData.tel} placeholder='Телефон' onChange={onChangeInput} required/>
-        <label className='visually-hidden' htmlFor='email'>Адрес электронной почты</label>
-        <input className='request__input input input--email' type='email' id='email' name='email' value={userData.email} placeholder='E-mail' onChange={onChangeInput} required/>
-        <button className='request__button button' type='submit'>Отправить</button>
+      <fieldset className="request__user calculator__step calculator__step--3">
+        <label className="visually-hidden" htmlFor="name">
+          Фамилия, имя, отчество
+        </label>
+        <input
+          className="request__input input"
+          type="text"
+          id="name"
+          name="name"
+          value={userData.name}
+          placeholder="ФИО"
+          onChange={onChangeInput}
+          autoFocus
+          required
+        />
+        <label className="visually-hidden" htmlFor="tel">
+          Номер телефона
+        </label>
+        <input
+          className="request__input  input input--tel"
+          type="tel"
+          id="tel"
+          name="tel"
+          value={userData.tel}
+          placeholder="Телефон"
+          onChange={onChangeInput}
+          required
+        />
+        <label className="visually-hidden" htmlFor="email">
+          Адрес электронной почты
+        </label>
+        <input
+          className="request__input input input--email"
+          type="email"
+          id="email"
+          name="email"
+          value={userData.email}
+          placeholder="E-mail"
+          onChange={onChangeInput}
+          required
+        />
+        <button className="request__button button" type="submit">
+          Отправить
+        </button>
       </fieldset>
     </div>
-    );
+  );
 };
 
 export default Request;
-

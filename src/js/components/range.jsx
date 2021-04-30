@@ -6,7 +6,7 @@ const Range = (props) => {
   const { parameters, currentValue, onChangeRange } = props;
   const { min, max, step } = parameters;
   return (
-    <div className='calculator__range'>
+    <div className="calculator__range">
       <Slider
         step={step}
         min={min}
@@ -20,7 +20,7 @@ const Range = (props) => {
           border: `none`,
           height: 14,
           width: 14,
-          backgroundColor: "#2C36F2"
+          backgroundColor: "#2C36F2",
         }}
       />
     </div>

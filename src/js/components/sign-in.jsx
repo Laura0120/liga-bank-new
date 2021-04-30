@@ -1,18 +1,23 @@
 import React from "react";
 
 const SignIn = (props) => {
-  const { setIsModal, isOpenMenu} = props;
+  const { setIsModal, isOpenMenu } = props;
 
   return (
-    <div className={`page-header__sing-in sing-in ${isOpenMenu? `sing-in--open-menu`: ``}`}>
+    <div
+      className={`page-header__sing-in sing-in ${
+        isOpenMenu ? `sing-in--open-menu` : ``
+      }`}
+    >
       <h2 className="visually-hidden">Вход] в Интернет-банк</h2>
-      <a 
+      <a
         className="sing-in__link"
         href="#"
-        onClick={(evt)=>{
+        onClick={(evt) => {
           evt.preventDefault();
           setIsModal(true);
-        }}>
+        }}
+      >
         <svg
           className="sing-in__icon"
           width="20"

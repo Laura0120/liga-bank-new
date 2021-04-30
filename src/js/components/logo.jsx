@@ -34,7 +34,7 @@ const Logo = () => {
             stroke="#F6F7FF"
           />
         </svg>
-        <div  className="logo__wrapper">
+        <div className="logo__wrapper">
           <svg
             className="logo__name"
             width="89"
@@ -48,7 +48,7 @@ const Logo = () => {
               fill="#1F1E25"
             />
           </svg>
-          <span  className="logo__label">интернет-банк</span>
+          <span className="logo__label">интернет-банк</span>
         </div>
       </a>
     </div>

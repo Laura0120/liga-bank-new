@@ -1,17 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import {useCreditCalculatorContext} from "../contexts/CreditCalculatorContext"
-import {addSpaces, deleteLine, getSumInitialFee, onFocusInput, onBlurInput, getDurationUnit}  from '../utils'
-import {MORTGAGE, CAR, CURRENCIES, DURATION_UNITS}  from '../const'
+import { useCreditCalculatorContext } from "../contexts/CreditCalculatorContext";
+import {
+  addSpaces,
+  deleteLine,
+  getSumInitialFee,
+  onFocusInput,
+  onBlurInput,
+  getDurationUnit,
+} from "../utils";
+import { MORTGAGE, CAR, CURRENCIES, DURATION_UNITS } from "../const";
 
-import Range from './range'
-import CheckboxMortgage from './checkbox-mortgage'
-import CheckboxCar from './checkbox-car'
+import Range from "./range";
+import CheckboxMortgage from "./checkbox-mortgage";
+import CheckboxCar from "./checkbox-car";
 
 const CreditParameters = () => {
   const {
-    parameters: { initialFee, price, duration, type }, 
-    setCurrentPrice, 
+    parameters: { initialFee, price, duration, type },
+    setCurrentPrice,
     setIsValidPrice,
     setSumInitialFee,
     setIsCapital,
@@ -25,15 +32,16 @@ const CreditParameters = () => {
     setRateInitialFee,
     isCarInsurance,
     isLifeInsurance,
-    rateInitialFee,isCapital
+    rateInitialFee,
+    isCapital,
   } = useCreditCalculatorContext();
 
   const onInputPrice = (evt) => {
     const numPrice = Number(deleteLine(evt.target.value, CURRENCIES));
     if (numPrice || evt.target.value === "") {
       setCurrentPrice(addSpaces(String(numPrice)));
-     if (numPrice < price.min || numPrice> price.max) {
-       setIsValidPrice(false)
+      if (numPrice < price.min || numPrice > price.max) {
+        setIsValidPrice(false);
       }
       return;
     }
@@ -107,42 +115,65 @@ const CreditParameters = () => {
 
   return (
     <React.Fragment>
-
-      <fieldset className='calculator__step calculator__step--2'>
+      <fieldset className="calculator__step calculator__step--2">
         <legend>Шаг 2. Введите параметры кредита</legend>
-        <div className='calculator__input-wrapper'>
+        <div className="calculator__input-wrapper">
           <label htmlFor="price">
             Стоимость {type === MORTGAGE.type ? `недвижимости` : `автомобиля`}
           </label>
-          <div className='calculator__input calculator__input--price input'>
-            <button className='calculator__price-button calculator__price-button--decrement' type="button" onClick={onDecrementPrice} />
+          <div
+            className={`calculator__input  input calculator__input--price ${
+              !isValidPrice ? `calculator__input--price-error` : ``
+            }`}
+          >
+            <button
+              className="calculator__price-button calculator__price-button--decrement"
+              type="button"
+              onClick={onDecrementPrice}
+            />
             <input
-              className='input input--price'
+              className="input input--price"
               type="text"
               id="price"
               value={currentPrice}
               onFocus={(evt) => setCurrentPrice(onFocusInput(evt, CURRENCIES))}
-              onBlur={() => setCurrentPrice(onBlurInput(currentPrice, CURRENCIES, CURRENCIES[0]))}
+              onBlur={() =>
+                setCurrentPrice(
+                  onBlurInput(currentPrice, CURRENCIES, CURRENCIES[0])
+                )
+              }
               onInput={onInputPrice}
             />
-            <button className='calculator__price-button calculator__price-button--increment' type="button" onClick={onIncrementPrice} />
+            <button
+              className="calculator__price-button calculator__price-button--increment"
+              type="button"
+              onClick={onIncrementPrice}
+            />
+            {!isValidPrice && (
+              <span className="calculator__price-error-msg">
+                Некорректное значение
+              </span>
+            )}
           </div>
-          <span className='calculator__label'>
+          <span className="calculator__label">
             От {price.min} до {price.max} {CURRENCIES[0]}
           </span>
-          {!isValidPrice && (<span className='calculator__price-error-msg'>Некорректное значение</span>)}
         </div>
-        <div className='calculator__input-wrapper'>
+        <div className="calculator__input-wrapper">
           <label htmlFor="initial-fee">Первоначальный взнос</label>
           <input
-            className='calculator__input calculator__input--initial-fee input'
+            className="calculator__input calculator__input--initial-fee input"
             type="text"
             id="initial-fee"
             value={sumInitialFee}
             onFocus={(evt) => setSumInitialFee(onFocusInput(evt, CURRENCIES))}
             onBlur={() =>
               setSumInitialFee(
-                onBlurInput(onCheckInitialFee(sumInitialFee), CURRENCIES, CURRENCIES[0])
+                onBlurInput(
+                  onCheckInitialFee(sumInitialFee),
+                  CURRENCIES,
+                  CURRENCIES[0]
+                )
               )
             }
             onInput={onInputSumInitialFee}
@@ -152,12 +183,12 @@ const CreditParameters = () => {
             currentValue={rateInitialFee}
             onChangeRange={(value) => setRateInitialFee(value)}
           />
-          <span className='calculator__label'>{initialFee.min + `%`}</span>
+          <span className="calculator__label">{initialFee.min + `%`}</span>
         </div>
-        <div className='calculator__input-wrapper'>
+        <div className="calculator__input-wrapper">
           <label htmlFor="duration">Срок кредитования</label>
           <input
-            className='calculator__input calculator__input--duration input'
+            className="calculator__input calculator__input--duration input"
             type="text"
             id="duration"
             value={currentDuration}
@@ -166,7 +197,11 @@ const CreditParameters = () => {
             }
             onBlur={() =>
               setCurrentDuration(
-                onBlurInput(onCheckDuration(currentDuration), DURATION_UNITS, getDurationUnit(onCheckDuration(currentDuration)))
+                onBlurInput(
+                  onCheckDuration(currentDuration),
+                  DURATION_UNITS,
+                  getDurationUnit(onCheckDuration(currentDuration))
+                )
               )
             }
             onInput={onInputDuration}
@@ -174,19 +209,37 @@ const CreditParameters = () => {
           <Range
             parameters={duration}
             currentValue={deleteLine(currentDuration, DURATION_UNITS)}
-            onChangeRange={(value) => setCurrentDuration(value + getDurationUnit(value))}
+            onChangeRange={(value) =>
+              setCurrentDuration(value + getDurationUnit(value))
+            }
           />
-           <div className='calculator__range-label'>
-            <span className='calculator__label'>{duration.min + getDurationUnit(duration.min)}</span>
-            <span className='calculator__label'>{duration.max + getDurationUnit(duration.max)}</span>
+          <div className="calculator__range-label">
+            <span className="calculator__label">
+              {duration.min + getDurationUnit(duration.min)}
+            </span>
+            <span className="calculator__label">
+              {duration.max + getDurationUnit(duration.max)}
+            </span>
           </div>
         </div>
-        {type === MORTGAGE.type ? <CheckboxMortgage isCapital={isCapital} setIsCapital={setIsCapital}/> : ``}
-        {type === CAR.type ? <CheckboxCar isCarInsurance={isCarInsurance} isLifeInsurance={isLifeInsurance} setIsCarInsurance={setIsCarInsurance} setIsLifeInsurance={setIsLifeInsurance}/> : ``}
+        {type === MORTGAGE.type ? (
+          <CheckboxMortgage isCapital={isCapital} setIsCapital={setIsCapital} />
+        ) : (
+          ``
+        )}
+        {type === CAR.type ? (
+          <CheckboxCar
+            isCarInsurance={isCarInsurance}
+            isLifeInsurance={isLifeInsurance}
+            setIsCarInsurance={setIsCarInsurance}
+            setIsLifeInsurance={setIsLifeInsurance}
+          />
+        ) : (
+          ``
+        )}
       </fieldset>
-      </React.Fragment>
-    );
+    </React.Fragment>
+  );
 };
 
 export default CreditParameters;
-

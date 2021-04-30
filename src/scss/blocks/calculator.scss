@@ -36,22 +36,44 @@
   padding-bottom: 15px;
 }
 
-.calculator__input--price {
-  display: flex;
-  justify-content: space-between;
+.calculator__input {
+  &--price {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &--select {
+    &:hover {
+      border-color: $outline-color;
+    }
+  }
+  &--price-error {
+    border-color: red;
+  }
+}
+.calculator__price-error-msg {
+  font-weight: 400;
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 38%;
 }
 
 .calculator__price-button {
   width: 10%;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
+  &:focus {
+    outline: 1px solid $outline-color;
+  }
 
   &--decrement {
-    background: url('../../img/decrement.svg') no-repeat center;
+    background: url("../../img/decrement.svg") no-repeat center;
   }
 
   &--increment {
-    background: url('../../img/increment.svg') no-repeat center;
+    background: url("../../img/increment.svg") no-repeat center;
   }
 }
 
@@ -71,15 +93,31 @@
   @include font(14px, 20px, $color: $grey);
 }
 
-.calculator__type-option {
+.calculator__input svg {
+  fill: #1f1e25;
+}
+
+.calculator__checkbox + label {
   position: relative;
-  height: 60px;
+  display: block;
+  padding-left: 24px;
+  cursor: pointer;
+
   &::before {
-    width: 50px;
-    height: 30px;
-    background-color: red;
+    content: "";
     position: absolute;
+    top: 2px;
+    left: 0;
+
+    width: 16px;
+    height: 16px;
+    border: 1px solid $blue;
+    border-radius: 2px;
   }
+}
+
+.calculator__checkbox:checked + label::before {
+  background: $blue url("../../img/check-mark-white.svg") no-repeat center;
 }
 
 @media (min-width: $tablet-width) {

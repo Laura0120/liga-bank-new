@@ -19,6 +19,10 @@
   &--email {
     margin-top: 20px;
   }
+
+  &:focus {
+    outline: 1px solid $outline-color;
+  }
 }
 
 @media (min-width: $tablet-width) {

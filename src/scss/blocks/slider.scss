@@ -26,15 +26,15 @@
   background-position: 100% 50%;
 
   &--first {
-    background-image: url('../../img/black-card-phone.png');
+    background-image: url("../../img/black-card-phone.png");
   }
 
   &--second {
-    background-image: url('../../img/slide-2-phone.jpg');
+    background-image: url("../../img/slide-2-phone.jpg");
   }
 
   &--third {
-    background-image: url('../../img/slide-3-phone.jpg');
+    background-image: url("../../img/slide-3-phone.jpg");
   }
 }
 
@@ -101,15 +101,16 @@
     &--first {
       background-repeat: no-repeat;
       background-position: 75% 55%, 83% 22%;
-      background-image: url('../../img/black-card-tablet.png'), url('../../img/white-card-tablet.png');
+      background-image: url("../../img/black-card-tablet.png"),
+        url("../../img/white-card-tablet.png");
     }
 
     &--second {
-      background-image: url('../../img/slide-2-tablet.jpg');
+      background-image: url("../../img/slide-2-tablet.jpg");
     }
 
     &--third {
-      background-image: url('../../img/slide-3-tablet.jpg');
+      background-image: url("../../img/slide-3-tablet.jpg");
     }
   }
 
@@ -141,15 +142,16 @@
     padding-bottom: 40px;
 
     &--first {
-      background-image: url('../../img/black-card.png'), url('../../img/white-card.png');
+      background-image: url("../../img/black-card.png"),
+        url("../../img/white-card.png");
     }
 
     &--second {
-      background-image: url('../../img/slide-2.jpg');
+      background-image: url("../../img/slide-2.jpg");
     }
 
     &--third {
-      background-image: url('../../img/slide-3.jpg');
+      background-image: url("../../img/slide-3.jpg");
     }
   }
 
