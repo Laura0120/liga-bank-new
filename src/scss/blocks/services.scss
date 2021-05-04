@@ -11,10 +11,10 @@
   background: $light-lilac no-repeat 100% 35%;
 
   &--contributions {
-    background-image: url("../../img/contributions-phone.jpg");
+    background-image: url('../../img/contributions-phone.jpg');
   }
   &--credits {
-    background-image: url("../../img/credits-phone.jpg");
+    background-image: url('../../img/credits-phone.jpg');
 
     .services__button {
       display: none;
@@ -25,10 +25,10 @@
     }
   }
   &--insurance {
-    background-image: url("../../img/insurance-phone.jpg");
+    background-image: url('../../img/insurance-phone.jpg');
   }
   &--online-services {
-    background-image: url("../../img/online-services-phone.jpg");
+    background-image: url('../../img/online-services-phone.jpg');
   }
 }
 
@@ -53,14 +53,18 @@
   margin-bottom: 20px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 8px;
     height: 6px;
-    background: url("../../img/check-mark.svg") no-repeat center;
+    background: url('../../img/check-mark.svg') no-repeat center;
     top: 7px;
     left: 0;
   }
+}
+
+.services__content a {
+  color: $dark-grey;
 }
 
 .services__button {
@@ -77,16 +81,16 @@
     background-position: 94% 50%;
 
     &--contributions {
-      background-image: url("../../img/contributions-tablet.jpg");
+      background-image: url('../../img/contributions-tablet.jpg');
     }
     &--credits {
-      background-image: url("../../img/credits-tablet.jpg");
+      background-image: url('../../img/credits-tablet.jpg');
     }
     &--insurance {
-      background-image: url("../../img/insurance-tablet.jpg");
+      background-image: url('../../img/insurance-tablet.jpg');
     }
     &--online-services {
-      background-image: url("../../img/online-services-tablet.jpg");
+      background-image: url('../../img/online-services-tablet.jpg');
     }
   }
 
@@ -131,85 +135,24 @@
     justify-content: space-between;
   }
 
-  .services-tabs__item {
-    width: 25%;
-    text-align: center;
-    padding: 40px 0;
-    text-decoration: none;
-    @include font(18px, 21px, 500);
-
-    &--active {
-      background-color: $light-lilac;
-    }
-  }
-
-  .services-tabs__item span {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-    }
-  }
-
-  .services-tabs__item {
-    &--contributions span {
-      padding-left: 44px;
-      &::before {
-        width: 34px;
-        height: 33px;
-        top: -4px;
-        background-image: url("../../img/vault-icon.svg");
-      }
-    }
-
-    &--credits span {
-      padding-left: 44px;
-      &::before {
-        width: 34px;
-        height: 30px;
-        top: -4px;
-        background-image: url("../../img/cards-icon.svg");
-      }
-    }
-    &--insurance span {
-      padding-left: 38px;
-      &::before {
-        width: 28px;
-        height: 34px;
-        top: -7px;
-        background-image: url("../../img/security-icon.svg");
-      }
-    }
-    &--online-services span {
-      padding-left: 30px;
-      &::before {
-        width: 20px;
-        height: 34px;
-        top: -7px;
-        background-image: url("../../img/phone-icon.svg");
-      }
-    }
-  }
-
   .services__page {
     padding: 60px 70px;
     background-position: 88% 50%;
 
     &--contributions {
-      background-image: url("../../img/contributions-desktop.jpg");
+      background-image: url('../../img/contributions-desktop.jpg');
     }
     &--credits {
-      background-image: url("../../img/credits-desktop.jpg");
+      background-image: url('../../img/credits-desktop.jpg');
     }
     &--insurance {
-      background-image: url("../../img/insurance-desktop.jpg");
+      background-image: url('../../img/insurance-desktop.jpg');
     }
     &--online-services {
-      background-image: url("../../img/online-services-desktop.jpg");
+      background-image: url('../../img/online-services-desktop.jpg');
     }
   }
+
   .services__wrappper {
     width: 400px;
   }

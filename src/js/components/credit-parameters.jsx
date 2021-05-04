@@ -208,7 +208,7 @@ const CreditParameters = () => {
           />
           <Range
             parameters={duration}
-            currentValue={deleteLine(currentDuration, DURATION_UNITS)}
+            currentValue={Number(deleteLine(currentDuration, DURATION_UNITS))}
             onChangeRange={(value) =>
               setCurrentDuration(value + getDurationUnit(value))
             }

@@ -1,8 +1,7 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 
-const BankBranchs = (props) => {
-  const {} = props;
+const BankBranchs = () => {
   const key = "AIzaSyAMe9CfR61jshFAOQLeS3B5RlUg45KrQMo";
   const location = {
     lat: 57.0,

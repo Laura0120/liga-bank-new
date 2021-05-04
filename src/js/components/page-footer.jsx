@@ -16,11 +16,11 @@ const PageFooter = () => {
       </div>
       <div className="page-footer__wrapper page-footer__wrapper--second">
         <div className="page-footer__contacts page-footer__contacts--mobile">
-          <span>*0904</span>{" "}
+          <a href="tel:*0904">*0904</a>
           <p>Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
         </div>
         <div className="page-footer__contacts page-footer__contacts--phone">
-          <span>8 800 111 22 33</span> <p>Бесплатный для всех городов России</p>
+          <a href="tel:8 800 111 22 33">8 800 111 22 33</a> <p>Бесплатный для всех городов России</p>
         </div>
         <SocialList />
       </div>

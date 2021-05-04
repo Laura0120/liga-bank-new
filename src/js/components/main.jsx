@@ -19,19 +19,6 @@ const SliderWrapped = withSlider(Slider);
 const Main = () => {
   const [isModal, setIsModal] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isMobile, setMobile] = useState(
-    window.innerWidth <= MOBILE_WIDTH_ONLY
-  );
-
-  window.onresize = () => {
-    setMobile(window.innerWidth < MOBILE_WIDTH_ONLY);
-  };
-
-  useEffect(() => {
-    if (!isMobile) {
-      setIsOpenMenu(false);
-    }
-  }, [isMobile]);
 
   return (
     <React.Fragment>
@@ -44,8 +31,9 @@ const Main = () => {
           setIsModal={setIsModal}
         />
         {!isOpenMenu && (
-          <SingIn setIsModal={setIsModal} isOpenMenu={isOpenMenu} />
+          <SingIn setIsModal={setIsModal} isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
         )}
+        
       </header>
       <main className="page-content">
         {isModal && <ModalSingIn setIsModal={setIsModal} />}

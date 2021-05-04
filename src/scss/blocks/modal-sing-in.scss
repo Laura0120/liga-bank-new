@@ -1,7 +1,6 @@
 .modal-sing-in {
   position: fixed;
   z-index: 2;
-  // top: calc(50% - (#{$modal-height-mobile}) / 2);
   left: calc(50% - ((100% - (#{$side-padding-mobile} * 2)) / 2));
   width: calc(100% - (#{$side-padding-mobile} * 2));
   min-width: calc(#{$mobile-width} - (#{$side-padding-mobile} * 2));
@@ -17,6 +16,10 @@
   margin: 0;
 }
 
+.modal-sing-in__form {
+  display: flex;
+  flex-direction: column;
+}
 .modal-sing-in .logo__wrapper {
   display: flex;
   flex-direction: column;
@@ -60,14 +63,14 @@
   cursor: pointer;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 14px;
     right: 8px;
 
     width: 22px;
     height: 12px;
-    background-image: url("../../img/closed-eye.svg");
+    background-image: url('../../img/closed-eye.svg');
   }
 }
 
@@ -85,12 +88,20 @@
 }
 
 .modal-sing-in__restore-password {
-  display: none;
+  text-decoration: none;
+  color: $grey;
+  align-self: center;
+}
+
+@media (max-width: $mobile-width-only) {
+  .modal-sing-in__restore-password {
+    order: 4;
+    margin-top: 15px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .modal-sing-in {
-    // top: calc(50% - (#{$modal-height}) / 2);
     left: calc(50% - ((100% - (#{$side-padding-tablet} * 2)) / 2));
     width: calc(100% - (#{$side-padding-tablet} * 2));
     min-height: $modal-height;
@@ -102,12 +113,13 @@
     right: 88px;
   }
 
-  .modal-sing-in__restore-password {
-    display: block;
-    text-decoration: none;
-    color: $dark-grey;
-    align-self: flex-end;
+  .modal-sing-in__wrapper:nth-child(2) {
     margin-bottom: 10px;
+  }
+
+  .modal-sing-in__restore-password {
+    align-self: flex-end;
+    margin-bottom: 30px;
   }
 
   .modal-sing-in__button {

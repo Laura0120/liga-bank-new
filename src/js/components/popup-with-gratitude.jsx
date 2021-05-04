@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 const PopupWithGratitude = (props) => {
   const { setIsPopup } = props;
@@ -6,6 +7,7 @@ const PopupWithGratitude = (props) => {
   useEffect(() => {
     document.addEventListener("click", onOverlayClick);
     window.addEventListener("keydown", onEcsDown);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onClose = () => {
@@ -43,6 +45,10 @@ const PopupWithGratitude = (props) => {
       <p>Наш менеджер скоро свяжется с вами по указанному номеру телефона.</p>
     </div>
   );
+};
+
+PopupWithGratitude.propTypes = {
+  setIsPopup: PropTypes.func.isRequired,
 };
 
 export default PopupWithGratitude;

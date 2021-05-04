@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
 
 const CheckboxMortgage = (props) => {
   const { isCapital, setIsCapital } = props;
 
   useEffect(() => {
     setIsCapital(true);
-  }, []);
+  }, [setIsCapital]);
 
   return (
     <div>
@@ -20,5 +21,10 @@ const CheckboxMortgage = (props) => {
     </div>
   );
 };
+
+CheckboxMortgage.propTypes = {
+  isCapital:PropTypes.bool.isRequired,
+  setIsCapital:PropTypes.func.isRequired,
+}
 
 export default CheckboxMortgage;

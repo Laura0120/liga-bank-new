@@ -24,19 +24,27 @@ const Offer = () => {
       ) : (
         <React.Fragment>
           <h3>Наше предложение</h3>
-          <dl className="offer__content">
-            <dt>{amountCredit}</dt>
-            <dd>Сумма {type === MORTGAGE.type ? `ипотеки` : `автокредита`}</dd>
-            <dt>{currentInterestRate + `%`} </dt>
-            <dd>Процентная ставка</dd>
-            <dt>{monthlyPayment + CURRENCIES[0]}</dt>
-            <dd>Ежемесячный платеж</dd>
-            <dt>
-              {Math.round((monthlyPayment / 100) * MAX_RATE_OF_INCOME) +
-                CURRENCIES[0]}
-            </dt>
-            <dd>Необходимый доход</dd>
-          </dl>
+          <div className="offer__content">
+            <dl>
+              <dt>{amountCredit}</dt>
+              <dd>Сумма {type === MORTGAGE.type ? `ипотеки` : `автокредита`}</dd>
+            </dl>
+            <dl>
+              <dt>{currentInterestRate + `%`} </dt>
+              <dd>Процентная ставка</dd>
+            </dl>
+            <dl>
+              <dt>{monthlyPayment + CURRENCIES[0]}</dt>
+              <dd>Ежемесячный платеж</dd>
+            </dl>
+            <dl>
+              <dt>
+                {Math.round((monthlyPayment / 100) * MAX_RATE_OF_INCOME) +
+                  CURRENCIES[0]}
+              </dt>
+              <dd>Необходимый доход</dd>
+            </dl>
+          </div>
           <button
             className="offer__button button"
             type="button"

@@ -36,7 +36,7 @@ const defaultParameters = {
   price: { defaultValue: "" },
   initialFee: { min: 0, max: 0 },
   minSize: 0,
-  duration: "",
+  duration: {},
   interestRate: 0,
 };
 
@@ -91,6 +91,7 @@ export default function CreditCalculatorContextProvider({ children }) {
     setIsCarInsurance(parameters.type === CAR.type);
     setIsLifeInsurance(parameters.type === CAR.type);
     setRateInitialFee(parameters.initialFee.min);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [parameters]);
 
   useEffect(() => {
@@ -105,7 +106,7 @@ export default function CreditCalculatorContextProvider({ children }) {
         numPrice >= parameters.price.min && numPrice <= parameters.price.max
       );
     }
-  }, [currentPrice, rateInitialFee]);
+  }, [currentPrice, parameters.price.max, parameters.price.min, rateInitialFee]);
 
   useEffect(() => {
     if (parameters.type === CAR.type) {
@@ -122,6 +123,7 @@ export default function CreditCalculatorContextProvider({ children }) {
         setCurrentInterestRate(parameters.interestRate[0]);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isCarInsurance, isLifeInsurance]);
 
   useEffect(() => {
@@ -157,6 +159,7 @@ export default function CreditCalculatorContextProvider({ children }) {
           : parameters.interestRate[1]
       );
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rateInitialFee]);
 
   const contextValue = {
