@@ -27,7 +27,7 @@
     padding-left: 29px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -39,14 +39,14 @@
   &--mobile {
     &::before {
       width: 10px;
-      background: url('../../img/mobaile.svg');
+      background: url("../../img/mobaile.svg");
     }
   }
 
   &--phone {
     &::before {
       width: 16px;
-      background: url('../../img/phone.svg');
+      background: url("../../img/phone.svg");
     }
   }
 

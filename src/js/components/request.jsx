@@ -14,12 +14,12 @@ const Request = (props) => {
   } = useCreditCalculatorContext();
 
   const [userData, setUserData] = useState(USER_DATA);
-  
+
   useEffect(() => {
     const savedUserData = localStorage.getItem(`userData`);
     const newUserData = savedUserData ? JSON.parse(savedUserData) : userData;
     setUserData(newUserData);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const CheckboxMortgage = (props) => {
   const { isCapital, setIsCapital } = props;
@@ -23,8 +23,8 @@ const CheckboxMortgage = (props) => {
 };
 
 CheckboxMortgage.propTypes = {
-  isCapital:PropTypes.bool.isRequired,
-  setIsCapital:PropTypes.func.isRequired,
-}
+  isCapital: PropTypes.bool.isRequired,
+  setIsCapital: PropTypes.func.isRequired,
+};
 
 export default CheckboxMortgage;

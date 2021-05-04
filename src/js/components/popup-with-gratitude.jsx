@@ -7,7 +7,7 @@ const PopupWithGratitude = (props) => {
   useEffect(() => {
     document.addEventListener("click", onOverlayClick);
     window.addEventListener("keydown", onEcsDown);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onClose = () => {

@@ -31,9 +31,12 @@ const Main = () => {
           setIsModal={setIsModal}
         />
         {!isOpenMenu && (
-          <SingIn setIsModal={setIsModal} isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
+          <SingIn
+            setIsModal={setIsModal}
+            isOpenMenu={isOpenMenu}
+            setIsOpenMenu={setIsOpenMenu}
+          />
         )}
-        
       </header>
       <main className="page-content">
         {isModal && <ModalSingIn setIsModal={setIsModal} />}

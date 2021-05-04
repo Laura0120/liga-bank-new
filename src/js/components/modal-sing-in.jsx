@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { disablePageScrolling } from "../utils";
 import { ACCOUNT } from "../const";
@@ -18,7 +18,7 @@ const ModalSingIn = (props) => {
       ? JSON.parse(savedLoginPassword)
       : account;
     setAccount(newLoginPassword);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const ModalSingIn = (props) => {
           <label htmlFor="show-hide"></label>
         </div>
         <a href="#restore-password" className="modal-sing-in__restore-password">
-           Забыли пароль?
+          Забыли пароль?
         </a>
         <button className="modal-sing-in__button button" type="submit">
           Войти
@@ -104,6 +104,6 @@ const ModalSingIn = (props) => {
 
 ModalSingIn.propTypes = {
   setIsModal: PropTypes.func.isRequired,
-}
+};
 
 export default ModalSingIn;

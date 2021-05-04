@@ -11,10 +11,10 @@
   background: $light-lilac no-repeat 100% 35%;
 
   &--contributions {
-    background-image: url('../../img/contributions-phone.jpg');
+    background-image: url("../../img/contributions-phone.jpg");
   }
   &--credits {
-    background-image: url('../../img/credits-phone.jpg');
+    background-image: url("../../img/credits-phone.jpg");
 
     .services__button {
       display: none;
@@ -25,10 +25,10 @@
     }
   }
   &--insurance {
-    background-image: url('../../img/insurance-phone.jpg');
+    background-image: url("../../img/insurance-phone.jpg");
   }
   &--online-services {
-    background-image: url('../../img/online-services-phone.jpg');
+    background-image: url("../../img/online-services-phone.jpg");
   }
 }
 
@@ -53,11 +53,11 @@
   margin-bottom: 20px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 8px;
     height: 6px;
-    background: url('../../img/check-mark.svg') no-repeat center;
+    background: url("../../img/check-mark.svg") no-repeat center;
     top: 7px;
     left: 0;
   }
@@ -81,16 +81,16 @@
     background-position: 94% 50%;
 
     &--contributions {
-      background-image: url('../../img/contributions-tablet.jpg');
+      background-image: url("../../img/contributions-tablet.jpg");
     }
     &--credits {
-      background-image: url('../../img/credits-tablet.jpg');
+      background-image: url("../../img/credits-tablet.jpg");
     }
     &--insurance {
-      background-image: url('../../img/insurance-tablet.jpg');
+      background-image: url("../../img/insurance-tablet.jpg");
     }
     &--online-services {
-      background-image: url('../../img/online-services-tablet.jpg');
+      background-image: url("../../img/online-services-tablet.jpg");
     }
   }
 
@@ -140,16 +140,16 @@
     background-position: 88% 50%;
 
     &--contributions {
-      background-image: url('../../img/contributions-desktop.jpg');
+      background-image: url("../../img/contributions-desktop.jpg");
     }
     &--credits {
-      background-image: url('../../img/credits-desktop.jpg');
+      background-image: url("../../img/credits-desktop.jpg");
     }
     &--insurance {
-      background-image: url('../../img/insurance-desktop.jpg');
+      background-image: url("../../img/insurance-desktop.jpg");
     }
     &--online-services {
-      background-image: url('../../img/online-services-desktop.jpg');
+      background-image: url("../../img/online-services-desktop.jpg");
     }
   }
 

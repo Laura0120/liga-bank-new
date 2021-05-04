@@ -54,7 +54,11 @@ const Navigation = (props) => {
           </li>
           {isOpenMenu && (
             <li className={`navigation__item navigation__item--${location}`}>
-              <SingIn setIsModal={setIsModal} isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
+              <SingIn
+                setIsModal={setIsModal}
+                isOpenMenu={isOpenMenu}
+                setIsOpenMenu={setIsOpenMenu}
+              />
             </li>
           )}
         </ul>

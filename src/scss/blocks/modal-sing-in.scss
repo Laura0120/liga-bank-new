@@ -63,14 +63,14 @@
   cursor: pointer;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 14px;
     right: 8px;
 
     width: 22px;
     height: 12px;
-    background-image: url('../../img/closed-eye.svg');
+    background-image: url("../../img/closed-eye.svg");
   }
 }
 

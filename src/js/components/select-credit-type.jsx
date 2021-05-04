@@ -20,7 +20,7 @@ const customStyles = {
     display: "flex",
     height: "100%",
     border: "none",
-    boxShadow: "none"
+    boxShadow: "none",
   }),
   menu: (provided) => ({
     ...provided,

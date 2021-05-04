@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import PopupWithGratitude from "./popup-with-gratitude";
 import Request from "./request";
 import Offer from "./offer";
@@ -17,7 +17,7 @@ const CreditBlock = () => {
     isOfferOpen,
     setIOfferOpen,
   } = useCreditCalculatorContext();
-  
+
   const onSubmit = (evt) => {
     evt.preventDefault();
     setRequestNumber({

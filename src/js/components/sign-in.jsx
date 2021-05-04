@@ -17,7 +17,7 @@ const SignIn = (props) => {
         onClick={(evt) => {
           evt.preventDefault();
           setIsModal(true);
-          setIsOpenMenu(false)
+          setIsOpenMenu(false);
         }}
       >
         <svg

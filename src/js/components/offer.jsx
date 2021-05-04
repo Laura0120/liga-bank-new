@@ -27,7 +27,9 @@ const Offer = () => {
           <div className="offer__content">
             <dl>
               <dt>{amountCredit}</dt>
-              <dd>Сумма {type === MORTGAGE.type ? `ипотеки` : `автокредита`}</dd>
+              <dd>
+                Сумма {type === MORTGAGE.type ? `ипотеки` : `автокредита`}
+              </dd>
             </dl>
             <dl>
               <dt>{currentInterestRate + `%`} </dt>
