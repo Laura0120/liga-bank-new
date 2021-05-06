@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { MOBILE_WIDTH_ONLY } from "../const";
 import SingIn from "./sign-in";
 import Logo from "./logo";
 import Navigation from "./navigation";

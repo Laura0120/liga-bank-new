@@ -41,7 +41,7 @@ const Offer = () => {
             </dl>
             <dl>
               <dt>
-                {Math.round((monthlyPayment / 100) * MAX_RATE_OF_INCOME) +
+                {Math.round((monthlyPayment / MAX_RATE_OF_INCOME) * 100) +
                   CURRENCIES[0]}
               </dt>
               <dd>Необходимый доход</dd>
