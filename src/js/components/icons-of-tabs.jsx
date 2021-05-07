@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes, { string } from "prop-types";
 
 const IconsOfTabs = (props) => {
   const { tabs, currentTab, location } = props;
@@ -19,7 +19,7 @@ const IconsOfTabs = (props) => {
 };
 
 IconsOfTabs.propTypes = {
-  tabs: PropTypes.array.isRequired,
+  tabs: PropTypes.arrayOf(string).isRequired,
   currentTab: PropTypes.number.isRequired,
   location: PropTypes.string.isRequired,
 };

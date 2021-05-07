@@ -34,9 +34,17 @@ export function useCreditCalculatorContext() {
 const defaultParameters = {
   type: "",
   price: { defaultValue: "" },
-  initialFee: { min: 0, max: 0 },
+  initialFee: {
+    min: 0,
+    max: 0,
+    step: 0,
+  },
   minSize: 0,
-  duration: {},
+  duration: {
+    min: 0,
+    max: 0,
+    step: 0,
+  },
   interestRate: 0,
 };
 

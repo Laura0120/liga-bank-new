@@ -115,7 +115,10 @@ const Request = (props) => {
 };
 
 Request.propTypes = {
-  requestNumber: PropTypes.object.isRequired,
+  requestNumber: PropTypes.shape({
+    mortgage: PropTypes.number,
+    car: PropTypes.number,
+  }).isRequired,
 };
 
 export default Request;

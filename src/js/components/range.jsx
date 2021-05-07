@@ -31,7 +31,11 @@ const Range = (props) => {
 Range.propTypes = {
   onChangeRange: PropTypes.func.isRequired,
   currentValue: PropTypes.number.isRequired,
-  parameters: PropTypes.object.isRequired,
+  parameters: PropTypes.shape({
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+  }).isRequired,
 };
 
 export default Range;
