@@ -13,8 +13,10 @@
   flex-direction: column;
 }
 
-.page-footer__contacts {
+.page-footer__contacts,
+.page-footer__contacts a {
   @include font(12px, 17px, 400, $grey);
+  text-decoration: none;
 
   &--mobile,
   &--phone {
@@ -67,8 +69,6 @@
 @media (min-width: 550px) {
   .page-footer {
     height: 350px;
-    // padding: 51px 45px;
-
     flex-direction: row;
   }
 
@@ -80,7 +80,6 @@
     &--adress {
       display: block;
       max-width: 252px;
-      // margin-right: 50px;
     }
   }
 }
@@ -112,7 +111,6 @@
   .page-footer__wrapper {
     flex-wrap: wrap;
     justify-content: space-between;
-    // width: max-content;
     &--first {
       width: 45%;
     }

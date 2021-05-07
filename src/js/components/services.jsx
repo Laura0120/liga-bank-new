@@ -28,7 +28,7 @@ const Services = () => {
   };
 
   const checkActionMove = () => {
-    var distance = touchStart - touchPosition;
+    let distance = touchStart - touchPosition;
 
     if (Math.abs(distance) > TOUCH_SENSITIVITY) {
       if (distance > 0) {
@@ -40,18 +40,15 @@ const Services = () => {
   };
 
   const onTouchStart = (evt) => {
-    // evt.preventDefault();
     touchStart = evt.changedTouches[0].clientX;
     touchPosition = touchStart;
   };
 
   const onTouchMove = (evt) => {
-    // evt.preventDefault();
     touchPosition = evt.changedTouches[0].clientX;
   };
 
-  const onTouchEnd = (evt) => {
-    // evt.preventDefault();
+  const onTouchEnd = () => {
     checkActionMove();
     touchStart = null;
     touchPosition = null;
@@ -80,10 +77,10 @@ const Services = () => {
       onTouchCancel={onTouchEnd}
     >
       <h2 className="visually-hidden">Наши услуги</h2>
-      <div className="services__tabs">
+      <div className="services__tabs services-tabs">
         {servicesArrey.map((tab, index) => (
           <a
-            href="#"
+            href={`#${tab}`}
             className={`services-tabs__item
             services-tabs__item--${tab}
             ${currentTab === index ? `services-tabs__item--active` : ``}`}
@@ -100,7 +97,7 @@ const Services = () => {
       <div className={`services__page services__page--${currentTab}`}>
         <div className="services__wrappper">
           {getContentOnActiveTab()}
-          <a className="services__button button" href="#">
+          <a href="#learn-more" className="services__button button">
             Узнать подробнее
           </a>
         </div>

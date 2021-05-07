@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+
 import { MORTGAGE, USER_DATA } from "../const";
 import { useCreditCalculatorContext } from "../contexts/CreditCalculatorContext";
 
@@ -12,12 +14,12 @@ const Request = (props) => {
   } = useCreditCalculatorContext();
 
   const [userData, setUserData] = useState(USER_DATA);
-  // const [validity, setValidity] = useState(false);
 
   useEffect(() => {
     const savedUserData = localStorage.getItem(`userData`);
     const newUserData = savedUserData ? JSON.parse(savedUserData) : userData;
     setUserData(newUserData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -110,6 +112,13 @@ const Request = (props) => {
       </fieldset>
     </div>
   );
+};
+
+Request.propTypes = {
+  requestNumber: PropTypes.shape({
+    mortgage: PropTypes.number,
+    car: PropTypes.number,
+  }).isRequired,
 };
 
 export default Request;

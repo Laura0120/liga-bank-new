@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import PropTypes from "prop-types";
 
 const Range = (props) => {
   const { parameters, currentValue, onChangeRange } = props;
@@ -25,6 +26,16 @@ const Range = (props) => {
       />
     </div>
   );
+};
+
+Range.propTypes = {
+  onChangeRange: PropTypes.func.isRequired,
+  currentValue: PropTypes.number.isRequired,
+  parameters: PropTypes.shape({
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+  }).isRequired,
 };
 
 export default Range;

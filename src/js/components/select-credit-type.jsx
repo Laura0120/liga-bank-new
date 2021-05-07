@@ -8,7 +8,6 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     color: "#1F1E25",
-
     borderTop: "1px solid #C1C2CA",
     padding: 25,
     paddingLeft: 15,
@@ -28,6 +27,7 @@ const customStyles = {
     boxShadow: "none",
     margin: "0.7px 0 0",
     width: "100%",
+    top: "101%",
   }),
   indicatorSeparator: () => ({
     display: "none",

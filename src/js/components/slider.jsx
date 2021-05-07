@@ -14,7 +14,7 @@ const Slider = (props) => {
   let touchPosition = null;
 
   const checkActionMove = () => {
-    var distance = touchStart - touchPosition;
+    let distance = touchStart - touchPosition;
 
     if (Math.abs(distance) > TOUCH_SENSITIVITY) {
       if (distance > 0) {
@@ -26,18 +26,15 @@ const Slider = (props) => {
   };
 
   const onTouchStart = (evt) => {
-    // evt.preventDefault();
     touchStart = evt.changedTouches[0].clientX;
     touchPosition = touchStart;
   };
 
   const onTouchMove = (evt) => {
-    // evt.preventDefault();
     touchPosition = evt.changedTouches[0].clientX;
   };
 
-  const onTouchEnd = (evt) => {
-    // evt.preventDefault();
+  const onTouchEnd = () => {
     checkActionMove();
     touchStart = null;
     touchPosition = null;
@@ -81,6 +78,8 @@ const Slider = (props) => {
 
 Slider.propTypes = {
   currentPage: PropTypes.string.isRequired,
+  currentPageIndex: PropTypes.number.isRequired,
+  onGetNextPage: PropTypes.func.isRequired,
 };
 
 export default Slider;

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { MOBILE_WIDTH_ONLY } from "../const";
 import SingIn from "./sign-in";
 import Logo from "./logo";
 import Navigation from "./navigation";
@@ -19,19 +18,6 @@ const SliderWrapped = withSlider(Slider);
 const Main = () => {
   const [isModal, setIsModal] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isMobile, setMobile] = useState(
-    window.innerWidth <= MOBILE_WIDTH_ONLY
-  );
-
-  window.onresize = () => {
-    setMobile(window.innerWidth < MOBILE_WIDTH_ONLY);
-  };
-
-  useEffect(() => {
-    if (!isMobile) {
-      setIsOpenMenu(false);
-    }
-  }, [isMobile]);
 
   return (
     <React.Fragment>
@@ -44,7 +30,11 @@ const Main = () => {
           setIsModal={setIsModal}
         />
         {!isOpenMenu && (
-          <SingIn setIsModal={setIsModal} isOpenMenu={isOpenMenu} />
+          <SingIn
+            setIsModal={setIsModal}
+            isOpenMenu={isOpenMenu}
+            setIsOpenMenu={setIsOpenMenu}
+          />
         )}
       </header>
       <main className="page-content">
@@ -63,3 +53,5 @@ const Main = () => {
 };
 
 export default Main;
+
+        

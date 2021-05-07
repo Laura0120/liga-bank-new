@@ -20,12 +20,12 @@ const withSlider = (Component) => {
     };
 
     useEffect(() => {
-      let slidesСhange = setInterval(() => {
+      let slidesChange = setInterval(() => {
         onGetNextPage("right");
       }, INTERVAL_CHANGES_SLIDE);
 
       return () => {
-        clearInterval(slidesСhange);
+        clearInterval(slidesChange);
       };
     });
 

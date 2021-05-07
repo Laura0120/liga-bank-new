@@ -9,7 +9,7 @@ const SlideFirst = () => {
       </p>
       <a
         className="slider__button slider__button--first button"
-        href="#"
+        href="#calculate-credit"
         onClick={(evt) => {
           evt.preventDefault();
           document.querySelector(".credit-block").scrollIntoView();

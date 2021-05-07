@@ -10,7 +10,7 @@ const Navigation = (props) => {
       {location === `header` ? (
         <button
           type="button"
-          className="navigation__toggle  navigation__toggle--closed"
+          className="page-header__toggle  page-header__toggle--closed"
           onClick={() => setIsOpenMenu(true)}
         >
           <span className="visually-hidden">
@@ -23,7 +23,7 @@ const Navigation = (props) => {
       {location === `header` && isOpenMenu ? (
         <button
           type="button"
-          className="navigation__toggle  navigation__toggle--open"
+          className="page-header__toggle page-header__toggle--open button-close"
           onClick={() => setIsOpenMenu(false)}
         >
           <span className="visually-hidden">Закрыть навигацию</span>
@@ -38,23 +38,27 @@ const Navigation = (props) => {
       >
         <ul className={`navigation__list navigation__list--${location}`}>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="#">Услуги</a>
+            <a href="#services">Услуги</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="#">Рассчитать кредит</a>
+            <a href="#credit">Рассчитать кредит</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
             <a href="/">Конвертер валют</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="#">Контакты</a>
+            <a href="#contacts">Контакты</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="#">Задать вопрос</a>
+            <a href="#ask-a-Question">Задать вопрос</a>
           </li>
           {isOpenMenu && (
             <li className={`navigation__item navigation__item--${location}`}>
-              <SingIn setIsModal={setIsModal} isOpenMenu={isOpenMenu} />
+              <SingIn
+                setIsModal={setIsModal}
+                isOpenMenu={isOpenMenu}
+                setIsOpenMenu={setIsOpenMenu}
+              />
             </li>
           )}
         </ul>
@@ -65,6 +69,9 @@ const Navigation = (props) => {
 
 Navigation.propTypes = {
   location: PropTypes.string.isRequired,
+  isOpenMenu: PropTypes.bool,
+  setIsOpenMenu: PropTypes.func,
+  setIsModal: PropTypes.func,
 };
 
 export default Navigation;

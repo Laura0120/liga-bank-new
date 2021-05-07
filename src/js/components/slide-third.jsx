@@ -7,7 +7,7 @@ const SlideThird = () => {
       <p className="slider__text">Всегда рядом</p>
       <a
         className="slider__button button"
-        href="#"
+        href="#find-a-branch"
         onClick={(evt) => {
           evt.preventDefault();
           document.querySelector(".bank-branchs").scrollIntoView();

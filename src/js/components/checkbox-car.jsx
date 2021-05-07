@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 const CheckboxCar = (props) => {
   const {
@@ -11,7 +12,7 @@ const CheckboxCar = (props) => {
   useEffect(() => {
     setIsCarInsurance(true);
     setIsLifeInsurance(true);
-  }, []);
+  }, [setIsCarInsurance, setIsLifeInsurance]);
 
   return (
     <div>
@@ -41,4 +42,10 @@ const CheckboxCar = (props) => {
   );
 };
 
+CheckboxCar.propTypes = {
+  isCarInsurance: PropTypes.bool.isRequired,
+  isLifeInsurance: PropTypes.bool.isRequired,
+  setIsCarInsurance: PropTypes.func.isRequired,
+  setIsLifeInsurance: PropTypes.func.isRequired,
+};
 export default CheckboxCar;

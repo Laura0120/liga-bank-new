@@ -7,7 +7,7 @@ export const SERVICES = {
   insurance: `Страхование`,
   "online-services": `Онлайн-сервисы`,
 };
-export const INTERVAL_CHANGES_SLIDE = 4000 * 60;
+export const INTERVAL_CHANGES_SLIDE = 4000;
 export const TOUCH_SENSITIVITY = 20;
 export const MOBILE_WIDTH_ONLY = 767;
 export const CURRENCIES = [" рублей"];

@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SignIn = (props) => {
-  const { setIsModal, isOpenMenu } = props;
+  const { setIsModal, isOpenMenu, setIsOpenMenu } = props;
 
   return (
     <div
@@ -9,13 +10,14 @@ const SignIn = (props) => {
         isOpenMenu ? `sing-in--open-menu` : ``
       }`}
     >
-      <h2 className="visually-hidden">Вход] в Интернет-банк</h2>
+      <h2 className="visually-hidden">Вход в Интернет-банк</h2>
       <a
         className="sing-in__link"
-        href="#"
+        href="#sing-in"
         onClick={(evt) => {
           evt.preventDefault();
           setIsModal(true);
+          setIsOpenMenu(false);
         }}
       >
         <svg
@@ -35,6 +37,12 @@ const SignIn = (props) => {
       </a>
     </div>
   );
+};
+
+SignIn.propTypes = {
+  setIsModal: PropTypes.func.isRequired,
+  setIsOpenMenu: PropTypes.func.isRequired,
+  isOpenMenu: PropTypes.bool.isRequired,
 };
 
 export default SignIn;
