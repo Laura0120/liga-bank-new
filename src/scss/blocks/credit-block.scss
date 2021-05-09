@@ -1,6 +1,9 @@
 .credit-block {
-  padding: 60px $side-padding-mobile 0;
+  min-width: $mobile-width;
+  max-width: $desktop-width-end;
   width: 100%;
+  margin: 0 auto;
+  padding: 60px $side-padding-mobile 0;
 }
 
 .credit-block__title {

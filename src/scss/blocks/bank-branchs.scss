@@ -1,4 +1,8 @@
 .bank-branchs {
+  min-width: $mobile-width;
+  max-width: $desktop-width-end;
+  width: 100%;
+  margin: 0 auto;
   padding: 60px 0;
 }
 

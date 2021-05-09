@@ -9,7 +9,6 @@ export const SERVICES = {
 };
 export const INTERVAL_CHANGES_SLIDE = 4000;
 export const TOUCH_SENSITIVITY = 20;
-export const MOBILE_WIDTH_ONLY = 767;
 export const CURRENCIES = [" рублей"];
 export const DURATION_UNITS = [" год", " года", " лет"];
 export const MATERNAL_CAPITAL = 470000;

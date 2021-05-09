@@ -8,7 +8,7 @@ import ServicesOnlineServices from "./services-online-services";
 import IconsOfTabs from "./icons-of-tabs";
 
 const Services = () => {
-  const servicesArrey = Object.keys(SERVICES);
+  const servicesArray = Object.keys(SERVICES);
   const [currentTab, setCurrentTab] = useState(0);
 
   let touchStart = null;
@@ -16,14 +16,14 @@ const Services = () => {
 
   const onGetNextTab = (directionSide) => {
     if (directionSide === "right") {
-      currentTab < servicesArrey.length - 1
+      currentTab < servicesArray.length - 1
         ? setCurrentTab(currentTab + 1)
         : setCurrentTab(0);
     }
     if (directionSide === "left") {
       currentTab !== 0
         ? setCurrentTab(currentTab - 1)
-        : setCurrentTab(servicesArrey.length - 1);
+        : setCurrentTab(servicesArray.length - 1);
     }
   };
 
@@ -78,7 +78,7 @@ const Services = () => {
     >
       <h2 className="visually-hidden">Наши услуги</h2>
       <div className="services__tabs services-tabs">
-        {servicesArrey.map((tab, index) => (
+        {servicesArray.map((tab, index) => (
           <a
             href={`#${tab}`}
             className={`services-tabs__item
@@ -103,7 +103,7 @@ const Services = () => {
         </div>
         {
           <IconsOfTabs
-            tabs={servicesArrey}
+            tabs={servicesArray}
             currentTab={currentTab}
             location={`services`}
           />
