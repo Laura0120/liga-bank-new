@@ -4,47 +4,48 @@
   width: 100%;
 
   &--first {
-    // background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841ff 97.14%);
     background-color: $blue;
   }
 
   &--second {
-    background-color: $gray-blue;
+    background: linear-gradient(90deg, #d4d7e3c5, #c1d6f13d);
   }
 
   &--third {
-    background-color: $light-blue;
+    background-color: #ccdff76e;
   }
 }
 
 .slider__wrapper {
   position: relative;
+  min-width: $mobile-width;
+  max-width: $desktop-width-end;
+  width: 100%;
+  height: max-content;
   margin: 0 auto;
   padding-bottom: 10px;
 
-  height: max-content;
-  width: 100%;
-  min-width: $mobile-width;
   background-repeat: no-repeat;
   background-position: 100% 50%;
 
   &--first {
-    background-image: url('../../img/black-card-phone.png');
+    background-image: url("../../img/black-card-phone.png");
   }
 
   &--second {
-    background-image: url('../../img/slide-2-phone.jpg');
+    background-image: url("../../img/slide-2-phone.jpg");
   }
 
   &--third {
-    background-image: url('../../img/slide-3-phone.jpg');
+    background-image: url("../../img/slide-3-phone.jpg");
   }
 }
 
 .slider__content {
   width: max-content;
   min-height: 178px;
-  padding: 48px 0 0 6.7%;
+  padding-top: 48px;
+  padding-left: $side-padding-mobile;
   margin-bottom: 32px;
 }
 
@@ -98,26 +99,41 @@
 }
 
 @media (min-width: $tablet-width) {
+  .slider--first {
+    background: linear-gradient(
+        183.47deg,
+        rgba(56, 65, 255, 0) 27.26%,
+        #3841ff 97.14%
+      ),
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+      $blue;
+    background-repeat: no-repeat;
+    background-size: 23.3% 199px, 17.3% 100%;
+    background-position: 77.5% bottom, right bottom;
+  }
+
   .slider__wrapper {
     padding-bottom: 15px;
     &--first {
+      background: url("../../img/black-card-tablet.png"),
+        url("../../img/white-card-tablet.png");
       background-repeat: no-repeat;
-      background-position: 75% 55%, 83% 22%;
-      background-image: url('../../img/black-card-tablet.png'), url('../../img/white-card-tablet.png');
+      background-position: 75% 55%, 89% 22%;
     }
 
     &--second {
-      background-image: url('../../img/slide-2-tablet.jpg');
+      background-image: url("../../img/slide-2-tablet.jpg");
     }
 
     &--third {
-      background-image: url('../../img/slide-3-tablet.jpg');
+      background-image: url("../../img/slide-3-tablet.jpg");
     }
   }
 
   .slider__content {
     min-height: 224px;
-    padding: 76px 0 0 19.6%;
+    padding-left: 86px;
+    padding-top: 76px;
     margin-bottom: 53px;
   }
 
@@ -139,25 +155,40 @@
 }
 
 @media (min-width: $desktop-width-start) {
+  .slider--first {
+    background: linear-gradient(
+        180.24deg,
+        rgba(32, 39, 179, 0) 32.89%,
+        #2027b3 99.79%
+      ),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+      $blue;
+    background-repeat: no-repeat;
+    background-size: 11% 100%, 11% 269px, 19.8% 269px, 21.7% 100%;
+    background-position: left bottom, 11% bottom, 73% bottom, right bottom;
+  }
   .slider__wrapper {
     padding-bottom: 40px;
-
     &--first {
-      background-image: url('../../img/black-card.png'), url('../../img/white-card.png');
+      background-image: url("../../img/black-card.png"),
+        url("../../img/white-card.png");
     }
 
     &--second {
-      background-image: url('../../img/slide-2.jpg');
+      background-image: url("../../img/slide-2.jpg");
     }
 
     &--third {
-      background-image: url('../../img/slide-3.jpg');
+      background-image: url("../../img/slide-3.jpg");
     }
   }
 
   .slider__content {
     min-height: 286px;
-
+    padding-top: 115px;
+    padding-left: 268px;
     margin-bottom: 66px;
   }
 
