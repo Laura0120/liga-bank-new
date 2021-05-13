@@ -2,7 +2,7 @@ import React from "react";
 
 import { useCreditCalculatorContext } from "../contexts/CreditCalculatorContext";
 import {
-  addSpaces,
+  addSpacesAfterThreeCharacters,
   deleteLine,
   getSumInitialFee,
   onFocusInput,
@@ -39,7 +39,7 @@ const CreditParameters = () => {
   const onInputPrice = (evt) => {
     const numPrice = Number(deleteLine(evt.target.value, CURRENCIES));
     if (numPrice || evt.target.value === "") {
-      setCurrentPrice(addSpaces(String(numPrice)));
+      setCurrentPrice(addSpacesAfterThreeCharacters(String(numPrice)));
       if (numPrice < price.min || numPrice > price.max) {
         setIsValidPrice(false);
       }
@@ -51,7 +51,7 @@ const CreditParameters = () => {
   const onInputSumInitialFee = (evt) => {
     const numSumInitialFee = Number(deleteLine(evt.target.value, CURRENCIES));
     if (numSumInitialFee || evt.target.value === "") {
-      setSumInitialFee(addSpaces(String(numSumInitialFee)));
+      setSumInitialFee(addSpacesAfterThreeCharacters(String(numSumInitialFee)));
       return;
     }
     return;
@@ -68,13 +68,13 @@ const CreditParameters = () => {
 
   const onIncrementPrice = () => {
     const result = Number(deleteLine(currentPrice, CURRENCIES)) + price.step;
-    setCurrentPrice(addSpaces(result) + CURRENCIES[0]);
+    setCurrentPrice(addSpacesAfterThreeCharacters(result) + CURRENCIES[0]);
     return;
   };
 
   const onDecrementPrice = () => {
     const result = Number(deleteLine(currentPrice, CURRENCIES)) - price.step;
-    setCurrentPrice(addSpaces(result) + CURRENCIES[0]);
+    setCurrentPrice(addSpacesAfterThreeCharacters(result) + CURRENCIES[0]);
     return;
   };
 
@@ -185,7 +185,7 @@ const CreditParameters = () => {
           />
           <span className="calculator__label">{initialFee.min + `%`}</span>
         </div>
-        <div className="calculator__input-wrapper">
+        <div className="calculator__input-wrapper ">
           <label htmlFor="duration">Срок кредитования</label>
           <input
             className="calculator__input calculator__input--duration input"

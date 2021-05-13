@@ -10,14 +10,14 @@
 }
 
 .services__page {
-  padding: 60px $side-padding-mobile 10px;
+  padding: 55px $side-padding-mobile 10px;
   background: $light-lilac no-repeat 100% 35%;
 
   &--contributions {
-    background-image: url("../../img/contributions-phone.jpg");
+    background-image: url('../../img/contributions-phone.jpg');
   }
   &--credits {
-    background-image: url("../../img/credits-phone.jpg");
+    background-image: url('../../img/credits-phone.jpg');
 
     .services__button {
       display: none;
@@ -28,39 +28,35 @@
     }
   }
   &--insurance {
-    background-image: url("../../img/insurance-phone.jpg");
+    background-image: url('../../img/insurance-phone.jpg');
   }
   &--online-services {
-    background-image: url("../../img/online-services-phone.jpg");
+    background-image: url('../../img/online-services-phone.jpg');
   }
-}
-
-.services__wrappper {
-  width: $mobile-width;
 }
 
 .services__title {
-  margin: 0 0 30px;
+  margin: 0 0 19px;
   @include font(16px, 23px, 500);
 }
 
 .services__content-list {
   @include list-reset();
-  margin: 0 0 10px;
+  margin: 0 0 22px;
   padding-right: 57px;
 }
 
 .services__content-list li {
   position: relative;
   padding-left: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 8px;
     height: 6px;
-    background: url("../../img/check-mark.svg") no-repeat center;
+    background: url('../../img/check-mark.svg') no-repeat center;
     top: 7px;
     left: 0;
   }
@@ -74,26 +70,26 @@
   display: block;
   text-align: center;
   width: 100%;
-  padding: 17px 0;
-  margin-bottom: 80px;
+  padding: 13px 0;
+  margin-bottom: 42px;
 }
 
 @media (min-width: $tablet-width) {
   .services__page {
-    padding: 60px $side-padding-tablet 15px;
+    padding: 56px $side-padding-tablet 15px;
     background-position: 94% 50%;
 
     &--contributions {
-      background-image: url("../../img/contributions-tablet.jpg");
+      background-image: url('../../img/contributions-tablet.jpg');
     }
     &--credits {
-      background-image: url("../../img/credits-tablet.jpg");
+      background-image: url('../../img/credits-tablet.jpg');
     }
     &--insurance {
-      background-image: url("../../img/insurance-tablet.jpg");
+      background-image: url('../../img/insurance-tablet.jpg');
     }
     &--online-services {
-      background-image: url("../../img/online-services-tablet.jpg");
+      background-image: url('../../img/online-services-tablet.jpg');
     }
   }
 
@@ -103,21 +99,23 @@
 
   .services__content-list {
     padding-right: 0;
+    margin-bottom: 29px;
   }
 
   .services__title {
     @include font(18px, 25px, 500);
+    margin-bottom: 22px;
   }
 
   .services__button {
     width: max-content;
-    padding: 18px 30px;
-    margin-bottom: 58px;
+    padding: 12px 22px;
+    margin-bottom: 37px;
   }
 
   .services__content-list li {
     padding-left: 21px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
     &::before {
       width: 11px;
@@ -130,7 +128,7 @@
 
 @media (min-width: $desktop-width-start) {
   .services {
-    padding: 60px $side-padding-desktop 0;
+    padding: 58px $side-padding-desktop 0;
   }
 
   .services__tabs {
@@ -139,20 +137,20 @@
   }
 
   .services__page {
-    padding: 60px 70px;
+    padding: 53px 70px 59px;
     background-position: 88% 50%;
 
     &--contributions {
-      background-image: url("../../img/contributions-desktop.jpg");
+      background-image: url('../../img/contributions-desktop.jpg');
     }
     &--credits {
-      background-image: url("../../img/credits-desktop.jpg");
+      background-image: url('../../img/credits-desktop.jpg');
     }
     &--insurance {
-      background-image: url("../../img/insurance-desktop.jpg");
+      background-image: url('../../img/insurance-desktop.jpg');
     }
     &--online-services {
-      background-image: url("../../img/online-services-desktop.jpg");
+      background-image: url('../../img/online-services-desktop.jpg');
     }
   }
 
@@ -162,10 +160,14 @@
 
   .services__title {
     @include font(22px, 31px, 500);
+    margin-bottom: 29px;
+  }
+  .services__content-list {
+    margin-bottom: 33px;
   }
 
   .services__button {
-    padding: 20px 30px;
+    padding: 14px 22px;
 
     margin-bottom: 0;
   }

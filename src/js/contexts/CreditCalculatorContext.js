@@ -9,7 +9,7 @@ import {
   DURATION_UNITS,
 } from "../const";
 import {
-  addSpaces,
+  addSpacesAfterThreeCharacters,
   getSumInitialFee,
   getDurationUnit,
   deleteLine,
@@ -45,7 +45,7 @@ const defaultParameters = {
     max: 0,
     step: 0,
   },
-  interestRate: 0,
+  interestRate: [0],
 };
 
 export default function CreditCalculatorContextProvider({ children }) {
@@ -58,18 +58,16 @@ export default function CreditCalculatorContextProvider({ children }) {
   const [amountCredit, setAmountCredit] = useState(null);
   const [isValidPrice, setIsValidPrice] = useState(true);
   const [currentPrice, setCurrentPrice] = useState(
-    addSpaces(parameters.price.defaultValue) + CURRENCIES[0]
+    addSpacesAfterThreeCharacters(parameters.price.defaultValue) + CURRENCIES[0]
   );
   const [sumInitialFee, setSumInitialFee] = useState(
-    addSpaces(getSumInitialFee(currentPrice, parameters.initialFee.min)) +
+    addSpacesAfterThreeCharacters(getSumInitialFee(currentPrice, parameters.initialFee.min)) +
       CURRENCIES
   );
   const [currentDuration, setCurrentDuration] = useState(
     parameters.duration.min + getDurationUnit(parameters.duration.min)
   );
-  const [currentInterestRate, setCurrentInterestRate] = useState(
-    parameters.interestRate.max
-  );
+  const [currentInterestRate, setCurrentInterestRate] = useState(parameters.interestRate[0]);
   const [isCapital, setIsCapital] = useState(false);
   const [isCarInsurance, setIsCarInsurance] = useState(false);
   const [isLifeInsurance, setIsLifeInsurance] = useState(false);
@@ -86,15 +84,15 @@ export default function CreditCalculatorContextProvider({ children }) {
     setIsOfferRequestFormOpen(false);
     setAmountCredit(``);
     setIsValidPrice(true);
-    setCurrentPrice(addSpaces(parameters.price.defaultValue) + CURRENCIES[0]);
+    setCurrentPrice(addSpacesAfterThreeCharacters(parameters.price.defaultValue) + CURRENCIES[0]);
     setSumInitialFee(
-      addSpaces(getSumInitialFee(currentPrice, parameters.initialFee.min)) +
+      addSpacesAfterThreeCharacters(getSumInitialFee(currentPrice, parameters.initialFee.min)) +
         CURRENCIES
     );
     setCurrentDuration(
       parameters.duration.min + getDurationUnit(parameters.duration.min)
     );
-    setCurrentInterestRate(parameters.interestRate.max);
+    setCurrentInterestRate(parameters.interestRate[0]);
     setIsCapital(parameters.type === MORTGAGE.type);
     setIsCarInsurance(parameters.type === CAR.type);
     setIsLifeInsurance(parameters.type === CAR.type);
@@ -104,7 +102,7 @@ export default function CreditCalculatorContextProvider({ children }) {
 
   useEffect(() => {
     setSumInitialFee(
-      addSpaces(getSumInitialFee(currentPrice, rateInitialFee)) + CURRENCIES[0]
+      addSpacesAfterThreeCharacters(getSumInitialFee(currentPrice, rateInitialFee)) + CURRENCIES[0]
     );
 
     const numPrice = Number(deleteLine(currentPrice, CURRENCIES));
@@ -137,7 +135,7 @@ export default function CreditCalculatorContextProvider({ children }) {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isCarInsurance, isLifeInsurance]);
+  }, [isCarInsurance, isLifeInsurance, currentPrice]);
 
   useEffect(() => {
     const rate = currentInterestRate / 100 / 12;

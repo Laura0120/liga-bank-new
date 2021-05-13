@@ -3,6 +3,7 @@ import React from "react";
 import { useCreditCalculatorContext } from "../contexts/CreditCalculatorContext";
 
 import { MORTGAGE, CURRENCIES, MAX_RATE_OF_INCOME } from "../const";
+import { addSpacesAfterThreeCharacters, convertPercentToString } from "../utils";
 
 const Offer = () => {
   const {
@@ -26,22 +27,23 @@ const Offer = () => {
           <h3>Наше предложение</h3>
           <div className="offer__content">
             <dl>
-              <dt>{amountCredit}</dt>
+              <dt>{addSpacesAfterThreeCharacters(amountCredit) +
+                  CURRENCIES[0]}</dt>
               <dd>
                 Сумма {type === MORTGAGE.type ? `ипотеки` : `автокредита`}
               </dd>
             </dl>
             <dl>
-              <dt>{currentInterestRate + `%`} </dt>
+              <dt>{convertPercentToString(currentInterestRate)} </dt>
               <dd>Процентная ставка</dd>
             </dl>
             <dl>
-              <dt>{monthlyPayment + CURRENCIES[0]}</dt>
+              <dt>{addSpacesAfterThreeCharacters(monthlyPayment) + CURRENCIES[0]}</dt>
               <dd>Ежемесячный платеж</dd>
             </dl>
             <dl>
               <dt>
-                {Math.round((monthlyPayment / MAX_RATE_OF_INCOME) * 100) +
+                {addSpacesAfterThreeCharacters(Math.round((monthlyPayment / MAX_RATE_OF_INCOME) * 100)) +
                   CURRENCIES[0]}
               </dt>
               <dd>Необходимый доход</dd>

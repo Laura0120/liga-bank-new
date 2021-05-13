@@ -20,7 +20,7 @@ const PageFooter = () => {
           <p>Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
         </div>
         <div className="page-footer__contacts page-footer__contacts--phone">
-          <a href="tel:8 800 111 22 33">8 800 111 22 33</a>{" "}
+          <a href="tel:88001112233">8 800 111 22 33</a>{" "}
           <p>Бесплатный для всех городов России</p>
         </div>
         <SocialList />

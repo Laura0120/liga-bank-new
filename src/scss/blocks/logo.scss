@@ -10,6 +10,11 @@
   align-items: flex-end;
 }
 
+.logo__name {
+  width: 107px;
+  height: 13px;
+}
+
 .logo__label {
   display: none;
 }
@@ -21,20 +26,25 @@
   }
 
   .logo__name {
-    width: 101px;
-    height: 13px;
+    width: 116px;
+    height: 15px;
   }
 }
 
 @media (min-width: $desktop-width-start) {
   .logo__icon {
     width: 28px;
-    height: 25px;
+    height: 27px;
     margin-right: 9px;
+    margin-bottom: 9px;
   }
 
   .logo__name {
     width: 112px;
-    height: 14px;
+    height: 26px;
+  }
+
+  .logo__wrapper {
+    display: block;
   }
 }

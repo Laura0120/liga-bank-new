@@ -7,7 +7,7 @@
 }
 
 .sing-in__icon {
-  margin-right: 10px;
+  margin: 0;
   width: 14px;
   height: 16px;
 }
@@ -23,6 +23,9 @@
   .sing-in__title {
     @include font(16px, 19px);
   }
+  .sing-in__icon {
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: $not-desktop-width) {
@@ -31,5 +34,11 @@
   }
   .sing-in--open-menu .sing-in__title {
     display: block;
+    margin-left: 10px;
+  }
+
+  .sing-in--open-menu .sing-in__icon {
+    width: 20px;
+    height: 20px;
   }
 }

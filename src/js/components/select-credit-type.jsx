@@ -9,7 +9,7 @@ const customStyles = {
     ...provided,
     color: "#1F1E25",
     borderTop: "1px solid #C1C2CA",
-    padding: 25,
+    padding: 18,
     paddingLeft: 15,
     fontWeight: 400,
     textAlign: "start",
@@ -21,6 +21,7 @@ const customStyles = {
     height: "100%",
     border: "none",
     boxShadow: "none",
+    paddingLeft: 15,
   }),
   menu: (provided) => ({
     ...provided,
@@ -45,7 +46,7 @@ const customStyles = {
     borderLeft: "1px solid #1f1e25",
     borderRight: "1px solid #1f1e25",
     borderRadius: "0 0 10px 10px",
-  }),
+  })
 };
 
 const SelectCreditType = () => {

@@ -36,9 +36,6 @@ const CreditBlock = () => {
         <div className="calculator__wrapper">
           <fieldset className="calculator__step calculator__step--1">
             <legend>Шаг 1. Цель кредита</legend>
-            <label htmlFor="type" className="visually-hidden">
-              Цель кредита
-            </label>
             <SelectCreditType />
           </fieldset>
           {typeCredit && <CreditParameters />}

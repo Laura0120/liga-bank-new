@@ -3,12 +3,12 @@
   max-width: $desktop-width-end;
   width: 100%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 28px 0 61px;
 }
 
 .bank-branchs h2 {
   padding: 0 $side-padding-mobile;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 
 .bank-branchs__map {
@@ -28,15 +28,18 @@
 
 @media (min-width: $tablet-width) {
   .bank-branchs {
-    padding: 80px $side-padding-tablet;
+    padding: 33px $side-padding-tablet 81px;
   }
+
   .bank-branchs h2 {
     padding: 0;
-    margin-bottom: 45px;
+    margin-bottom: 33px;
   }
+
   .bank-branchs__map {
     height: 462px;
   }
+
   .bank-branchs__map-marker {
     width: 35px;
     height: 40px;
@@ -48,9 +51,9 @@
 
 @media (min-width: $desktop-width-start) {
   .bank-branchs {
-    padding: 98px $side-padding-desktop;
+    padding: 62px $side-padding-desktop 111px;
   }
   .bank-branchs h2 {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
   }
 }

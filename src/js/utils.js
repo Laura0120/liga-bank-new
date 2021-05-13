@@ -1,11 +1,15 @@
-import { CURRENCIES, DURATION_UNITS } from "./const";
+import { CURRENCIES, DURATION_UNITS} from "./const";
 
 export const disablePageScrolling = () => {
   document.body.classList.add("no-scrolling");
 };
 
-export const addSpaces = (num) => {
+export const addSpacesAfterThreeCharacters = (num) => {
   return num.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
+};
+
+export const convertPercentToString = (num) => {
+  return num ? `${num.toFixed(2).toString().replace(".", ",")}%` : '';
 };
 
 export const deleteLine = (value, strings) => {
@@ -21,12 +25,12 @@ export const deleteLine = (value, strings) => {
 };
 
 export const onFocusInput = (evt, strings) => {
-  return addSpaces(deleteLine(evt.target.value, strings));
+  return addSpacesAfterThreeCharacters(deleteLine(evt.target.value, strings));
 };
 
 export const onBlurInput = (value, strings, line) => {
   deleteLine(value, strings);
-  return addSpaces(value) + line;
+  return addSpacesAfterThreeCharacters(value) + line;
 };
 
 export const getSumInitialFee = (price, rate) => {

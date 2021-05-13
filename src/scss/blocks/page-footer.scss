@@ -13,21 +13,18 @@
   flex-direction: column;
 }
 
-.page-footer__contacts,
-.page-footer__contacts a {
+.page-footer__contacts {
   @include font(12px, 17px, 400, $grey);
-  text-decoration: none;
-
   &--mobile,
   &--phone {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 26px;
+    margin-bottom: 19px;
     padding-left: 29px;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -39,14 +36,14 @@
   &--mobile {
     &::before {
       width: 10px;
-      background: url("../../img/mobaile.svg");
+      background: url('../../img/mobaile.svg');
     }
   }
 
   &--phone {
     &::before {
       width: 16px;
-      background: url("../../img/phone.svg");
+      background: url('../../img/phone.svg');
     }
   }
 
@@ -65,6 +62,10 @@
     margin: 0;
   }
 }
+.page-footer__contacts a {
+  @include font(15px, 19px, 500, $grey);
+  text-decoration: none;
+}
 
 @media (min-width: 550px) {
   .page-footer {
@@ -80,6 +81,11 @@
     &--adress {
       display: block;
       max-width: 252px;
+    }
+
+    &--mobile,
+    &--phone {
+      margin-bottom: 24px;
     }
   }
 }
@@ -99,6 +105,13 @@
 
     flex-direction: row;
   }
+  .page-footer__contacts a {
+    @include font(16px, 22px, 500, $grey);
+  }
+
+  .page-footer__wrapper--second {
+    padding: 8px 0 0 15px;
+  }
 }
 
 @media (min-width: $desktop-width-end) {
@@ -110,13 +123,24 @@
 
   .page-footer__wrapper {
     flex-wrap: wrap;
-    justify-content: space-between;
+
     &--first {
       width: 45%;
     }
     &--second {
       flex-direction: row;
       width: 55%;
+      justify-content: space-between;
+      padding: 10px 0 0 29px;
+    }
+  }
+
+  .page-footer__contacts {
+    &--adress {
+      margin: 5px 30px 0 0;
+    }
+    &--mobile {
+      margin-right: 50px;
     }
   }
 }
