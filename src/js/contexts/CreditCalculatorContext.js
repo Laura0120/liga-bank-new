@@ -61,13 +61,16 @@ export default function CreditCalculatorContextProvider({ children }) {
     addSpacesAfterThreeCharacters(parameters.price.defaultValue) + CURRENCIES[0]
   );
   const [sumInitialFee, setSumInitialFee] = useState(
-    addSpacesAfterThreeCharacters(getSumInitialFee(currentPrice, parameters.initialFee.min)) +
-      CURRENCIES
+    addSpacesAfterThreeCharacters(
+      getSumInitialFee(currentPrice, parameters.initialFee.min)
+    ) + CURRENCIES
   );
   const [currentDuration, setCurrentDuration] = useState(
     parameters.duration.min + getDurationUnit(parameters.duration.min)
   );
-  const [currentInterestRate, setCurrentInterestRate] = useState(parameters.interestRate[0]);
+  const [currentInterestRate, setCurrentInterestRate] = useState(
+    parameters.interestRate[0]
+  );
   const [isCapital, setIsCapital] = useState(false);
   const [isCarInsurance, setIsCarInsurance] = useState(false);
   const [isLifeInsurance, setIsLifeInsurance] = useState(false);
@@ -84,10 +87,14 @@ export default function CreditCalculatorContextProvider({ children }) {
     setIsOfferRequestFormOpen(false);
     setAmountCredit(``);
     setIsValidPrice(true);
-    setCurrentPrice(addSpacesAfterThreeCharacters(parameters.price.defaultValue) + CURRENCIES[0]);
+    setCurrentPrice(
+      addSpacesAfterThreeCharacters(parameters.price.defaultValue) +
+        CURRENCIES[0]
+    );
     setSumInitialFee(
-      addSpacesAfterThreeCharacters(getSumInitialFee(currentPrice, parameters.initialFee.min)) +
-        CURRENCIES
+      addSpacesAfterThreeCharacters(
+        getSumInitialFee(currentPrice, parameters.initialFee.min)
+      ) + CURRENCIES
     );
     setCurrentDuration(
       parameters.duration.min + getDurationUnit(parameters.duration.min)
@@ -102,7 +109,9 @@ export default function CreditCalculatorContextProvider({ children }) {
 
   useEffect(() => {
     setSumInitialFee(
-      addSpacesAfterThreeCharacters(getSumInitialFee(currentPrice, rateInitialFee)) + CURRENCIES[0]
+      addSpacesAfterThreeCharacters(
+        getSumInitialFee(currentPrice, rateInitialFee)
+      ) + CURRENCIES[0]
     );
 
     const numPrice = Number(deleteLine(currentPrice, CURRENCIES));

@@ -8,7 +8,8 @@
   }
 
   &--second {
-    background: linear-gradient(90deg, #dde2ec, #dde2ec), linear-gradient(180deg, #f2f6ff, #eff9ff94);
+    background: linear-gradient(90deg, #dde2ec, #dde2ec),
+      linear-gradient(180deg, #f2f6ff, #eff9ff94);
     background-repeat: no-repeat;
     background-size: 50% 100%, 50% 100%;
     background-position: left bottom, right bottom;
@@ -32,15 +33,15 @@
   background-position: 100% 59%;
 
   &--first {
-    background-image: url('../../img/black-card-phone.png');
+    background-image: url("../../img/black-card-phone.png");
   }
 
   &--second {
-    background-image: url('../../img/slide-2-phone.jpg');
+    background-image: url("../../img/slide-2-phone.jpg");
   }
 
   &--third {
-    background-image: url('../../img/slide-3-phone.jpg');
+    background-image: url("../../img/slide-3-phone.jpg");
   }
 }
 
@@ -103,8 +104,13 @@
 
 @media (min-width: $tablet-width) {
   .slider--first {
-    background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
-      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%), $blue;
+    background: linear-gradient(
+        183.47deg,
+        rgba(56, 65, 255, 0) 27.26%,
+        #3841ff 97.14%
+      ),
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+      $blue;
     background-repeat: no-repeat;
     background-size: 23.3% 199px, 17.3% 100%;
     background-position: 77.5% bottom, right bottom;
@@ -113,17 +119,18 @@
   .slider__wrapper {
     padding-bottom: 15px;
     &--first {
-      background: url('../../img/black-card-tablet.png'), url('../../img/white-card-tablet.png');
+      background: url("../../img/black-card-tablet.png"),
+        url("../../img/white-card-tablet.png");
       background-repeat: no-repeat;
       background-position: 70% 72%, 89% 22%;
     }
 
     &--second {
-      background-image: url('../../img/slide-2-tablet.jpg');
+      background-image: url("../../img/slide-2-tablet.jpg");
     }
 
     &--third {
-      background-image: url('../../img/slide-3-tablet.jpg');
+      background-image: url("../../img/slide-3-tablet.jpg");
     }
   }
 
@@ -157,10 +164,15 @@
 
 @media (min-width: $desktop-width-start) {
   .slider--first {
-    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+    background: linear-gradient(
+        180.24deg,
+        rgba(32, 39, 179, 0) 32.89%,
+        #2027b3 99.79%
+      ),
       linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
       linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
-      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%), $blue;
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+      $blue;
     background-repeat: no-repeat;
     background-size: 11% 100%, 11% 269px, 19.8% 269px, 21.7% 100%;
     background-position: left bottom, 11% bottom, 73% bottom, right bottom;
@@ -169,15 +181,16 @@
     padding-bottom: 40px;
     background-position: 68% 69%, 78% 35%;
     &--first {
-      background-image: url('../../img/black-card.png'), url('../../img/white-card.png');
+      background-image: url("../../img/black-card.png"),
+        url("../../img/white-card.png");
     }
 
     &--second {
-      background-image: url('../../img/slide-2.jpg');
+      background-image: url("../../img/slide-2.jpg");
     }
 
     &--third {
-      background-image: url('../../img/slide-3.jpg');
+      background-image: url("../../img/slide-3.jpg");
     }
   }
 

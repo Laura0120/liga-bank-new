@@ -46,7 +46,7 @@ const customStyles = {
     borderLeft: "1px solid #1f1e25",
     borderRight: "1px solid #1f1e25",
     borderRadius: "0 0 10px 10px",
-  })
+  }),
 };
 
 const SelectCreditType = () => {

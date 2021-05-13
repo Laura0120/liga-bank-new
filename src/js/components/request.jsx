@@ -43,7 +43,7 @@ const Request = (props) => {
         <tbody>
           <tr>
             <th>Номер заявки</th>
-            <th>{`№ ` + String(requestNumber[type]).padStart(4, '0')}</th>
+            <th>{`№ ` + String(requestNumber[type]).padStart(4, "0")}</th>
           </tr>
           <tr>
             <th>Цель кредита</th>

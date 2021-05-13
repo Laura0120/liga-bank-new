@@ -11,13 +11,16 @@
 
 .services__page {
   padding: 55px $side-padding-mobile 10px;
-  background: $light-lilac no-repeat 100% 35%;
+  background-color: $light-lilac;
+  background-repeat: no-repeat;
+  background-position: 100% 39%;
 
-  &--contributions {
-    background-image: url('../../img/contributions-phone.jpg');
+  &--0 {
+    background-image: url("../../img/contributions-phone.jpg");
   }
-  &--credits {
-    background-image: url('../../img/credits-phone.jpg');
+
+  &--1 {
+    background-image: url("../../img/credits-phone.jpg");
 
     .services__button {
       display: none;
@@ -25,14 +28,29 @@
 
     a {
       color: $dark-grey;
+      font-weight: 500;
     }
   }
-  &--insurance {
-    background-image: url('../../img/insurance-phone.jpg');
+
+  &--2 {
+    background-image: url("../../img/insurance-phone.jpg");
+
+    .services__button {
+      margin-bottom: 81px;
+    }
   }
-  &--online-services {
-    background-image: url('../../img/online-services-phone.jpg');
+
+  &--3 {
+    background-image: url("../../img/online-services-phone.jpg");
+
+    .services__button {
+      margin-bottom: 32px;
+    }
   }
+}
+
+.services__content--credits {
+  margin-bottom: 68px;
 }
 
 .services__title {
@@ -52,11 +70,11 @@
   margin-bottom: 11px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 8px;
     height: 6px;
-    background: url('../../img/check-mark.svg') no-repeat center;
+    background: url("../../img/check-mark.svg") no-repeat center;
     top: 7px;
     left: 0;
   }
@@ -77,24 +95,51 @@
 @media (min-width: $tablet-width) {
   .services__page {
     padding: 56px $side-padding-tablet 15px;
-    background-position: 94% 50%;
+    background-position: 91% 50%;
 
-    &--contributions {
-      background-image: url('../../img/contributions-tablet.jpg');
+    &--0 {
+      background-image: url("../../img/contributions-tablet.jpg");
     }
-    &--credits {
-      background-image: url('../../img/credits-tablet.jpg');
+
+    &--1 {
+      background-image: url("../../img/credits-tablet.jpg");
+
+      .services__wrappper {
+        width: 310px;
+      }
     }
-    &--insurance {
-      background-image: url('../../img/insurance-tablet.jpg');
+
+    &--2 {
+      background-image: url("../../img/insurance-tablet.jpg");
+
+      .services__wrappper {
+        width: 310px;
+      }
+
+      .services__button {
+        margin-bottom: 59px;
+      }
     }
-    &--online-services {
-      background-image: url('../../img/online-services-tablet.jpg');
+
+    &--3 {
+      background-image: url("../../img/online-services-tablet.jpg");
+
+      .services__wrappper {
+        width: 340px;
+      }
+
+      .services__button {
+        margin-bottom: 53px;
+      }
     }
   }
 
   .services__wrappper {
     width: 380px;
+  }
+
+  .services__content--credits {
+    margin-bottom: 44px;
   }
 
   .services__content-list {
@@ -138,19 +183,43 @@
 
   .services__page {
     padding: 53px 70px 59px;
-    background-position: 88% 50%;
+    background-position: 81.5% 50%;
 
-    &--contributions {
-      background-image: url('../../img/contributions-desktop.jpg');
+    &--0 {
+      background-image: url("../../img/contributions-desktop.jpg");
     }
-    &--credits {
-      background-image: url('../../img/credits-desktop.jpg');
+
+    &--1 {
+      background-image: url("../../img/credits-desktop.jpg");
+      padding-bottom: 35px;
+
+      .services__wrappper {
+        width: 330px;
+      }
     }
-    &--insurance {
-      background-image: url('../../img/insurance-desktop.jpg');
+
+    &--2 {
+      background-image: url("../../img/insurance-desktop.jpg");
+
+      .services__button {
+        margin-bottom: 0;
+      }
     }
-    &--online-services {
-      background-image: url('../../img/online-services-desktop.jpg');
+
+    &--3 {
+      background-image: url("../../img/online-services-desktop.jpg");
+
+      .services__wrappper {
+        width: 413px;
+      }
+
+      .services__content-list {
+        padding-right: 50px;
+      }
+
+      .services__button {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -158,10 +227,15 @@
     width: 400px;
   }
 
+  .services__content--credits {
+    margin-bottom: 0;
+  }
+
   .services__title {
     @include font(22px, 31px, 500);
     margin-bottom: 29px;
   }
+
   .services__content-list {
     margin-bottom: 33px;
   }

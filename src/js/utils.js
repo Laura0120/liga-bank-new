@@ -1,4 +1,4 @@
-import { CURRENCIES, DURATION_UNITS} from "./const";
+import { CURRENCIES, DURATION_UNITS } from "./const";
 
 export const disablePageScrolling = () => {
   document.body.classList.add("no-scrolling");
@@ -9,7 +9,7 @@ export const addSpacesAfterThreeCharacters = (num) => {
 };
 
 export const convertPercentToString = (num) => {
-  return num ? `${num.toFixed(2).toString().replace(".", ",")}%` : '';
+  return num ? `${num.toFixed(2).toString().replace(".", ",")}%` : "";
 };
 
 export const deleteLine = (value, strings) => {

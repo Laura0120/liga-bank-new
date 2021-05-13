@@ -85,11 +85,11 @@
   }
 
   &--decrement {
-    background: url('../../img/decrement.svg') no-repeat center;
+    background: url("../../img/decrement.svg") no-repeat center;
   }
 
   &--increment {
-    background: url('../../img/increment.svg') no-repeat 65% center;
+    background: url("../../img/increment.svg") no-repeat 65% center;
   }
 }
 
@@ -116,7 +116,7 @@
   cursor: pointer;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 2px;
     left: 0;
@@ -129,7 +129,7 @@
 }
 
 .calculator__checkbox:checked + label::before {
-  background: $blue url('../../img/check-mark-white.svg') no-repeat center;
+  background: $blue url("../../img/check-mark-white.svg") no-repeat center;
 }
 
 @media (min-width: $tablet-width) {
