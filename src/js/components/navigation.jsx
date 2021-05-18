@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SingIn from "./sign-in";
+import { disablePageScrolling, enablePageScrolling } from "../utils";
 
 const Navigation = (props) => {
   const { location, isOpenMenu, setIsOpenMenu, setIsModal } = props;
@@ -10,12 +11,13 @@ const Navigation = (props) => {
       {location === `header` ? (
         <button
           type="button"
-          className="page-header__toggle  page-header__toggle--closed"
-          onClick={() => setIsOpenMenu(true)}
+          className="page-header__toggle  page-header__toggle--hamburger"
+          onClick={() => {
+            disablePageScrolling();
+            setIsOpenMenu(true);
+          }}
         >
-          <span className="visually-hidden">
-            {isOpenMenu ? `Закрыть навигацию` : `Открыть навигацию`}
-          </span>
+          <span className="visually-hidden">Открыть навигацию</span>
         </button>
       ) : (
         ``
@@ -24,7 +26,10 @@ const Navigation = (props) => {
         <button
           type="button"
           className="page-header__toggle page-header__toggle--open button-close"
-          onClick={() => setIsOpenMenu(false)}
+          onClick={() => {
+            setIsOpenMenu(false);
+            enablePageScrolling();
+          }}
         >
           <span className="visually-hidden">Закрыть навигацию</span>
         </button>

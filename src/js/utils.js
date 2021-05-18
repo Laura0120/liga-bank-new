@@ -4,6 +4,10 @@ export const disablePageScrolling = () => {
   document.body.classList.add("no-scrolling");
 };
 
+export const enablePageScrolling = () => {
+  document.body.classList.remove("no-scrolling");
+};
+
 export const addSpacesAfterThreeCharacters = (num) => {
   return num.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
 };

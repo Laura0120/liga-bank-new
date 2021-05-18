@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { disablePageScrolling } from "../utils";
+import { disablePageScrolling, enablePageScrolling } from "../utils";
 import { ACCOUNT } from "../const";
 import Logo from "./logo";
 
@@ -26,7 +26,7 @@ const ModalSingIn = (props) => {
   }, [account]);
 
   const onClose = () => {
-    document.body.classList.remove("no-scrolling");
+    enablePageScrolling();
     setIsModal(false);
     document.removeEventListener("keydown", onEcsDown);
   };

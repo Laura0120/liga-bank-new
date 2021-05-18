@@ -10,7 +10,7 @@ const customStyles = {
     color: "#1F1E25",
     borderTop: "1px solid #C1C2CA",
     padding: 18,
-    paddingLeft: 15,
+    paddingLeft: "3.7%",
     fontWeight: 400,
     textAlign: "start",
     backgroundColor: "white",
@@ -21,7 +21,7 @@ const customStyles = {
     height: "100%",
     border: "none",
     boxShadow: "none",
-    paddingLeft: 15,
+    paddingLeft: "3.7%",
   }),
   menu: (provided) => ({
     ...provided,
@@ -33,11 +33,29 @@ const customStyles = {
   indicatorSeparator: () => ({
     display: "none",
   }),
-
-  placeholder: (provided, state) => ({
+  placeholder: (provided) => ({
     ...provided,
     color: "#1F1E25",
     border: "none",
+    margin: 0,
+  }),
+  valueContainer: () => ({
+    padding: 0,
+    width: 0,
+  }),
+  indicatorsContainer: (provided) => ({
+    ...provided,
+    paddingRight: "2.5%",
+  }),
+  dropdownIndicator: (provided) => ({
+    ...provided,
+    paddingRight: 0,
+    paddingBottom: 9,
+    color: "#1f1e25",
+    "& svg": {
+      height: 28,
+      width: 28,
+    },
   }),
   menuList: (provided) => ({
     ...provided,
@@ -45,7 +63,7 @@ const customStyles = {
     borderBottom: "1px solid #1f1e25",
     borderLeft: "1px solid #1f1e25",
     borderRight: "1px solid #1f1e25",
-    borderRadius: "0 0 10px 10px",
+    borderRadius: "0 0 5px 5px",
   }),
 };
 
@@ -53,7 +71,7 @@ const SelectCreditType = () => {
   const {
     typeCredit,
     setTypeCredit,
-    setIOfferOpen,
+    setIsOfferOpen,
   } = useCreditCalculatorContext();
 
   return (
@@ -62,7 +80,7 @@ const SelectCreditType = () => {
       className="calculator__input calculator__input--select input"
       onChange={(selectedOption) => {
         setTypeCredit(selectedOption.value);
-        setIOfferOpen(true);
+        setIsOfferOpen(true);
       }}
       value={
         typeCredit

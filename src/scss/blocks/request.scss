@@ -1,7 +1,7 @@
 .request {
   width: 100%;
-  padding: 17px 0px;
-  margin: 0 auto 10px;
+  padding: 21px 0;
+  margin: 0 auto 3px;
 }
 
 .request h3 {
@@ -12,6 +12,7 @@
 .request__data {
   width: 100%;
   padding: 17px 0 0;
+  margin-left: -1px;
 }
 
 .request__data tr {
@@ -19,17 +20,19 @@
   flex-direction: column;
   text-align: left;
   border-bottom: 1px solid #c4c4c4;
-  padding: 13px 0 10px;
 }
 
 .request__data th {
+  padding-left: 0;
   &:first-child {
     @include font(16px, 23px, 500);
+    padding-bottom: 12.5px;
   }
 
   &:last-child {
     @include font(18px, 25px, 500);
     order: -1;
+    padding-top: 12.5px;
   }
 }
 
@@ -44,13 +47,13 @@
 
 .request__button {
   width: 100%;
-  padding: 16px 60px;
-  margin-top: 30px;
+  padding: 17px 0 18px;
+  margin-top: 29px;
 }
 
 @media (min-width: $tablet-width) {
   .request {
-    padding: 55px 0 34px;
+    padding: 22px 0 34px;
     margin: 0;
   }
 
@@ -69,28 +72,32 @@
   .request__data tr {
     flex-direction: row;
     justify-content: space-between;
-    padding: 13px 0px 8px;
+    padding: 12.5px 0px 10.5px;
   }
 
   .request__data th {
     &:last-child {
       order: 1;
       @include font(22px, 31px, 500);
+      padding: 0;
+    }
+    &:first-child {
+      padding: 3px 0 0;
     }
   }
 
   .request__button {
-    margin-top: 40px;
-    padding: 14px 60px;
+    margin-top: 41px;
+    padding: 17px;
   }
 }
 
 @media (min-width: $desktop-width-start) {
   .request {
     width: 770px;
-    padding: 67px 69px 70px;
+    padding: 68px 69px 70px;
     background-color: $light-lilac;
-    margin: 34px auto;
+    margin: 34px auto 33px;
   }
 
   .request h2 {
@@ -98,11 +105,12 @@
   }
 
   .request__data {
-    padding-top: 11px;
+    padding-top: 12px;
   }
 
   .request__button {
     width: max-content;
     margin: 40px auto 0;
+    padding: 17px 60px;
   }
 }

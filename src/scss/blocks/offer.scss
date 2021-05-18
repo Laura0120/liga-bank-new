@@ -1,10 +1,10 @@
 .offer {
   width: 100%;
-  padding: 29px 15px 40px;
+  padding: 34px 15px 40px;
   background-color: $light-lilac;
   @include font(18px, 25px, 500);
   height: max-content;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
 }
 
 .offer h3 {
@@ -14,23 +14,23 @@
 .offer__content {
   display: flex;
   flex-direction: column;
-  padding-top: 25px;
+  padding-top: 23px;
   margin: 0;
 }
 
 .offer__content dl {
   margin: 0;
-  padding-bottom: 14px;
+  padding-bottom: 13px;
 }
 
 .offer__content dd {
   margin: 0;
-  @include font(16px, 22.5px, 400);
+  @include font(16px, 23px, 400);
 }
 
 .offer__button {
   width: 100%;
-  padding: 16px;
+  padding: 18px;
   margin-top: 15px;
 }
 
@@ -57,7 +57,7 @@
   }
 
   .offer__button {
-    padding: 14px;
+    padding: 16px;
     margin-top: 6px;
   }
 }
@@ -81,7 +81,7 @@
 
 @media (min-width: $desktop-width-end) {
   .offer {
-    padding: 57px 59px;
+    padding: 57px 59px 60px;
     width: 42.7%;
     margin-top: 5px;
   }
@@ -92,6 +92,7 @@
   }
 
   .offer__content dl {
+    padding-bottom: 26px;
     width: auto;
     &:nth-child(2n + 1) {
       width: 50%;
@@ -99,7 +100,7 @@
     }
 
     &:nth-child(2n) {
-      width: 40%;
+      width: 41%;
     }
 
     &:nth-child(3),
@@ -108,6 +109,6 @@
     }
   }
   .offer__button {
-    margin-top: 11px;
+    margin-top: 35px;
   }
 }

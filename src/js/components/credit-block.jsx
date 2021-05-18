@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import PopupWithGratitude from "./popup-with-gratitude";
 import Request from "./request";
 import Offer from "./offer";
-import CreditParameters from "./credit-parameters";
 import SelectCreditType from "./select-credit-type";
+import { disablePageScrolling } from "../utils";
+
 import { useCreditCalculatorContext } from "../contexts/CreditCalculatorContext";
+
+const CreditParameters = React.lazy(() => import("./credit-parameters"));
 
 const CreditBlock = () => {
   const [isPopup, setIsPopup] = useState(false);
@@ -15,7 +18,7 @@ const CreditBlock = () => {
     setTypeCredit,
     isOfferRequestFormOpen,
     isOfferOpen,
-    setIOfferOpen,
+    setIsOfferOpen,
   } = useCreditCalculatorContext();
 
   const onSubmit = (evt) => {
@@ -26,7 +29,8 @@ const CreditBlock = () => {
     });
     setTypeCredit(null);
     setIsPopup(true);
-    setIOfferOpen(false);
+    disablePageScrolling();
+    setIsOfferOpen(false);
   };
 
   return (
@@ -38,7 +42,11 @@ const CreditBlock = () => {
             <legend>Шаг 1. Цель кредита</legend>
             <SelectCreditType />
           </fieldset>
-          {typeCredit && <CreditParameters />}
+          {typeCredit && (
+            <Suspense fallback={<div>Загрузка...</div>}>
+              <CreditParameters />
+            </Suspense>
+          )}
         </div>
         {isOfferOpen ? <Offer /> : ``}
         {isOfferRequestFormOpen && <Request requestNumber={requestNumber} />}

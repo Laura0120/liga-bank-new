@@ -3,6 +3,7 @@
   max-width: $desktop-width-end;
   margin: 0 auto;
   width: 100%;
+  line-height: 18.2px;
 }
 
 .services__tabs {
@@ -17,6 +18,9 @@
 
   &--0 {
     background-image: url("../../img/contributions-phone.jpg");
+    .services__button {
+      margin-bottom: 44px;
+    }
   }
 
   &--1 {
@@ -33,41 +37,52 @@
   }
 
   &--2 {
-    background-image: url("../../img/insurance-phone.jpg");
+    background-image: url("../../img/insurance-phone.png");
 
     .services__button {
-      margin-bottom: 81px;
+      margin-bottom: 80px;
     }
   }
 
   &--3 {
-    background-image: url("../../img/online-services-phone.jpg");
+    background-image: url("../../img/online-services-phone.png");
+    background-position: 100% 40%;
 
     .services__button {
-      margin-bottom: 32px;
+      margin-bottom: 34px;
     }
   }
 }
 
-.services__content--credits {
-  margin-bottom: 68px;
+.services__content {
+  &--credits {
+    margin-bottom: 70px;
+  }
+
+  &--online-services {
+    max-width: 92%;
+  }
 }
 
 .services__title {
-  margin: 0 0 19px;
-  @include font(16px, 23px, 500);
+  margin: 0 17px 22px 0;
+  @include font(16px, 22.5px, 500);
+
+  &--credits {
+    margin-right: 52px;
+  }
 }
 
 .services__content-list {
   @include list-reset();
-  margin: 0 0 22px;
+  margin: 0 0 23px;
   padding-right: 57px;
 }
 
 .services__content-list li {
   position: relative;
   padding-left: 15px;
-  margin-bottom: 11px;
+  margin-bottom: 12px;
 
   &::before {
     content: "";
@@ -80,6 +95,14 @@
   }
 }
 
+.services__content-list--online-services li:first-child {
+  margin-right: 21px;
+}
+
+.services__content-text {
+  margin-right: 10px;
+}
+
 .services__content a {
   color: $dark-grey;
 }
@@ -88,79 +111,73 @@
   display: block;
   text-align: center;
   width: 100%;
-  padding: 13px 0;
+  padding: 16px 0 12px;
   margin-bottom: 42px;
 }
 
 @media (min-width: $tablet-width) {
+  .services {
+    line-height: 20.8px;
+  }
+
   .services__page {
     padding: 56px $side-padding-tablet 15px;
-    background-position: 91% 50%;
+    background-position: 90.5% 50%;
 
     &--0 {
       background-image: url("../../img/contributions-tablet.jpg");
+      .services__button {
+        margin-bottom: 36px;
+      }
     }
 
     &--1 {
       background-image: url("../../img/credits-tablet.jpg");
-
-      .services__wrappper {
-        width: 310px;
-      }
     }
 
     &--2 {
       background-image: url("../../img/insurance-tablet.jpg");
 
-      .services__wrappper {
-        width: 310px;
-      }
-
       .services__button {
-        margin-bottom: 59px;
+        margin-bottom: 57px;
       }
     }
 
     &--3 {
-      background-image: url("../../img/online-services-tablet.jpg");
-
-      .services__wrappper {
-        width: 340px;
-      }
-
+      background-image: url("../../img/online-services-tablet.png");
       .services__button {
         margin-bottom: 53px;
       }
     }
   }
 
-  .services__wrappper {
-    width: 380px;
-  }
+  .services__content {
+    &--contributions {
+      max-width: 55%;
+    }
 
-  .services__content--credits {
-    margin-bottom: 44px;
+    &--credits {
+      max-width: 46%;
+      margin-bottom: 44px;
+    }
+
+    &--insurance {
+      max-width: 48%;
+    }
+
+    &--online-services {
+      max-width: 49%;
+    }
   }
 
   .services__content-list {
     padding-right: 0;
-    margin-bottom: 29px;
-  }
-
-  .services__title {
-    @include font(18px, 25px, 500);
-    margin-bottom: 22px;
-  }
-
-  .services__button {
-    width: max-content;
-    padding: 12px 22px;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
   }
 
   .services__content-list li {
     padding-left: 21px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     &::before {
       width: 11px;
@@ -169,11 +186,37 @@
       background-size: contain;
     }
   }
+
+  .services__content-list {
+    &--online-services li {
+      margin-bottom: 17px;
+
+      &:first-child {
+        margin-right: 111px;
+      }
+    }
+  }
+
+  .services__title {
+    @include font(18px, 25px, 500);
+    margin-bottom: 25px;
+
+    &--online-services {
+      margin-right: 0;
+    }
+  }
+
+  .services__button {
+    width: max-content;
+    margin-bottom: 37px;
+    padding: 15px 30px;
+  }
 }
 
 @media (min-width: $desktop-width-start) {
   .services {
     padding: 58px $side-padding-desktop 0;
+    line-height: 22.5px;
   }
 
   .services__tabs {
@@ -187,15 +230,15 @@
 
     &--0 {
       background-image: url("../../img/contributions-desktop.jpg");
+      .services__button {
+        padding: 19px 30px 16px 31px;
+        margin-bottom: 0;
+      }
     }
 
     &--1 {
       background-image: url("../../img/credits-desktop.jpg");
       padding-bottom: 35px;
-
-      .services__wrappper {
-        width: 330px;
-      }
     }
 
     &--2 {
@@ -207,42 +250,59 @@
     }
 
     &--3 {
-      background-image: url("../../img/online-services-desktop.jpg");
-
-      .services__wrappper {
-        width: 413px;
-      }
-
-      .services__content-list {
-        padding-right: 50px;
-      }
+      background-image: url("../../img/online-services-desktop.png");
 
       .services__button {
+        padding: 17px 30px;
         margin-bottom: 0;
       }
     }
   }
 
-  .services__wrappper {
-    width: 400px;
-  }
+  .services__content {
+    &--contributions {
+      max-width: 40%;
+    }
 
-  .services__content--credits {
-    margin-bottom: 0;
+    &--credits {
+      margin-bottom: 0;
+      max-width: 37%;
+    }
+
+    &--insurance {
+      max-width: 35%;
+    }
+
+    &--online-services {
+      max-width: 42%;
+    }
   }
 
   .services__title {
     @include font(22px, 31px, 500);
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   .services__content-list {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
+    &--credits {
+      margin-bottom: 32px;
+    }
+    &--online-services {
+      padding-right: 50px;
+    }
+  }
+
+  .services__content-list--online-services li:first-child {
+    margin-right: 136px;
+  }
+
+  .services__content-text {
+    line-height: 25.2px;
   }
 
   .services__button {
-    padding: 14px 22px;
-
+    padding: 16px 30px;
     margin-bottom: 0;
   }
 }

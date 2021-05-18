@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
+import { enablePageScrolling } from "../utils";
 
 const PopupWithGratitude = (props) => {
   const { setIsPopup } = props;
@@ -11,7 +12,7 @@ const PopupWithGratitude = (props) => {
   }, []);
 
   const onClose = () => {
-    document.body.classList.remove("no-scrolling");
+    enablePageScrolling();
     setIsPopup(false);
     document.removeEventListener("click", onOverlayClick);
     document.removeEventListener("keydown", onEcsDown);

@@ -11,7 +11,7 @@
     background: linear-gradient(90deg, #dde2ec, #dde2ec),
       linear-gradient(180deg, #f2f6ff, #eff9ff94);
     background-repeat: no-repeat;
-    background-size: 50% 100%, 50% 100%;
+    background-size: 60% 100%, 50% 100%;
     background-position: left bottom, right bottom;
   }
 
@@ -49,7 +49,7 @@
   width: max-content;
   min-height: 178px;
   padding-top: 38px;
-  padding-left: $side-padding-mobile;
+  padding-left: 5%;
   margin-bottom: 32px;
 }
 
@@ -68,11 +68,20 @@
 
   &--first {
     color: $light-lilac;
+    margin-bottom: 38px;
+  }
+
+  &--second {
+    max-width: 152px;
   }
 }
 
 .slider__button {
-  padding: 12px 22px;
+  padding: 12px 30px;
+
+  &--third {
+    padding: 12px 37px 13px;
+  }
 }
 
 .slider__checkbox {
@@ -122,7 +131,7 @@
       background: url("../../img/black-card-tablet.png"),
         url("../../img/white-card-tablet.png");
       background-repeat: no-repeat;
-      background-position: 70% 72%, 89% 22%;
+      background-position: 70% 72%, 87% 33%;
     }
 
     &--second {
@@ -155,10 +164,18 @@
     margin: 0 0 43px 0;
     font-size: 18px;
     line-height: 21px;
+
+    &--second {
+      max-width: max-content;
+    }
   }
 
   .slider__button {
-    padding: 14px 22px;
+    padding: 14px 31px;
+
+    &--third {
+      padding: 14px 38px;
+    }
   }
 }
 
@@ -177,8 +194,8 @@
     background-size: 11% 100%, 11% 269px, 19.8% 269px, 21.7% 100%;
     background-position: left bottom, 11% bottom, 73% bottom, right bottom;
   }
+
   .slider__wrapper {
-    padding-bottom: 40px;
     background-position: 68% 69%, 78% 35%;
     &--first {
       background-image: url("../../img/black-card.png"),
@@ -195,10 +212,7 @@
   }
 
   .slider__content {
-    min-height: 286px;
-    padding-top: 102px;
-    padding-left: 268px;
-    margin-bottom: 66px;
+    padding-left: 15%;
   }
 
   .slider__title {
@@ -208,11 +222,31 @@
   }
 
   .slider__text {
-    margin: 0 0 46px 0;
+    margin: 0 0 48px 0;
     font-size: 22px;
     line-height: 26px;
   }
+
   .slider__button {
-    padding: 15px 35px;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 14px 36px 17px;
+
+    &--third {
+      padding: 15px 50px 16px 47px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-end) {
+  .slider__wrapper {
+    padding-bottom: 40px;
+  }
+
+  .slider__content {
+    min-height: 286px;
+    padding-top: 102px;
+    padding-left: 268px;
+    margin-bottom: 66px;
   }
 }

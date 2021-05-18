@@ -155,7 +155,7 @@ const CreditParameters = () => {
               </span>
             )}
           </div>
-          <span className="calculator__label">
+          <span className="calculator__label calculator__label--price">
             От {price.min} до {price.max} {CURRENCIES[0]}
           </span>
         </div>

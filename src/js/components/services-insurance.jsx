@@ -6,7 +6,7 @@ const ServicesInsurance = () => {
       <p className="services__title">
         Лига Страхование — застрахуем все что захотите
       </p>
-      <ul className="services__content-list">
+      <ul className="services__content-list services__content-list--insurance ">
         <li>Автомобильное страхование</li>
         <li>Страхование жизни и здоровья</li>
         <li>Страхование недвижимости</li>

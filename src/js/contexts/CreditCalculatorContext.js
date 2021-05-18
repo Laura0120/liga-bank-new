@@ -33,7 +33,13 @@ export function useCreditCalculatorContext() {
 
 const defaultParameters = {
   type: "",
-  price: { defaultValue: "" },
+  price: {
+    min: 0,
+    max: 0,
+    step: 0,
+    defaultValue: "",
+  },
+
   initialFee: {
     min: 0,
     max: 0,
@@ -54,7 +60,7 @@ export default function CreditCalculatorContextProvider({ children }) {
   const [typeCredit, setTypeCredit] = useState(null);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [isOfferRequestFormOpen, setIsOfferRequestFormOpen] = useState(false);
-  const [isOfferOpen, setIOfferOpen] = useState(false);
+  const [isOfferOpen, setIsOfferOpen] = useState(false);
   const [amountCredit, setAmountCredit] = useState(null);
   const [isValidPrice, setIsValidPrice] = useState(true);
   const [currentPrice, setCurrentPrice] = useState(
@@ -204,7 +210,7 @@ export default function CreditCalculatorContextProvider({ children }) {
     isOfferRequestFormOpen,
     setIsOfferRequestFormOpen,
     isOfferOpen,
-    setIOfferOpen,
+    setIsOfferOpen,
     isCapital,
     isCarInsurance,
     isLifeInsurance,

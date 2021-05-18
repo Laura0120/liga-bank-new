@@ -6,7 +6,7 @@ const SlideThird = () => {
       <p className="slider__title">Лига Банк</p>
       <p className="slider__text">Всегда рядом</p>
       <a
-        className="slider__button button"
+        className="slider__button slider__button--third button"
         href="#find-a-branch"
         onClick={(evt) => {
           evt.preventDefault();
