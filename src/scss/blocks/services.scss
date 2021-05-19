@@ -55,6 +55,10 @@
 }
 
 .services__content {
+  &--contributions {
+    max-width: 93%;
+  }
+
   &--credits {
     margin-bottom: 70px;
   }
@@ -69,7 +73,7 @@
   @include font(16px, 22.5px, 500);
 
   &--credits {
-    margin-right: 52px;
+    margin-right: 35px;
   }
 }
 
@@ -77,6 +81,10 @@
   @include list-reset();
   margin: 0 0 23px;
   padding-right: 57px;
+
+  &--contributions {
+    padding-right: 42px;
+  }
 }
 
 .services__content-list li {
@@ -261,7 +269,7 @@
 
   .services__content {
     &--contributions {
-      max-width: 40%;
+      max-width: 36%;
     }
 
     &--credits {
@@ -304,5 +312,12 @@
   .services__button {
     padding: 16px 30px;
     margin-bottom: 0;
+  }
+}
+@media (min-width: $desktop-width-end) {
+  .services__content {
+    &--contributions {
+      max-width: 40%;
+    }
   }
 }

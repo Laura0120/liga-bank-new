@@ -6,7 +6,7 @@ const ServicesContributions = () => {
       <p className="services__title">
         Вклады Лига Банка – это выгодная инвестиция в свое будущее
       </p>
-      <ul className="services__content-list">
+      <ul className="services__content-list services__content-list--contributions">
         <li>Проценты по вкладам до 7%</li>
         <li>Разнообразные условия</li>
         <li>

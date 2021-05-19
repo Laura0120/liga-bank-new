@@ -29,6 +29,7 @@ const customStyles = {
     margin: "0.7px 0 0",
     width: "100%",
     top: "101%",
+    position: "static",
   }),
   indicatorSeparator: () => ({
     display: "none",
@@ -76,6 +77,7 @@ const SelectCreditType = () => {
 
   return (
     <Select
+      menuPosition="static"
       placeholder="Выберите цель кредита"
       className="calculator__input calculator__input--select input"
       onChange={(selectedOption) => {
