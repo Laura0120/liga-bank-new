@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SingIn from "./sign-in";
 import { disablePageScrolling, enablePageScrolling } from "../utils";
+import {MAIN_URL} from "../const";
 
 const Navigation = (props) => {
   const { location, isOpenMenu, setIsOpenMenu, setIsModal } = props;
@@ -46,13 +47,13 @@ const Navigation = (props) => {
             <a href="#services">Услуги</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="#credit">Рассчитать кредит</a>
+            <a href="#credit-block">Рассчитать кредит</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="/">Конвертер валют</a>
+            <a href={MAIN_URL}>Конвертер валют</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
-            <a href="#contacts">Контакты</a>
+            <a href="#bank-branchs">Контакты</a>
           </li>
           <li className={`navigation__item navigation__item--${location}`}>
             <a href="#ask-a-Question">Задать вопрос</a>

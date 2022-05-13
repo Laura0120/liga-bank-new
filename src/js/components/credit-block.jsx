@@ -34,7 +34,7 @@ const CreditBlock = () => {
   };
 
   return (
-    <section className="page-content__credit-block credit-block">
+    <section className="page-content__credit-block credit-block" id="credit-block">
       <h2>Кредитный калькулятор</h2>
       <form className="credit-block__calculator calculator" onSubmit={onSubmit}>
         <div className="calculator__wrapper">

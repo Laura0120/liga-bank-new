@@ -1,3 +1,4 @@
+export const MAIN_URL = `${process.env.PUBLIC_URL}`;
 export const SLIDER_PAGES = [`first`, `second`, `third`];
 export const USER_DATA = { name: "", tel: "", email: "" };
 export const ACCOUNT = { login: "", password: "" };

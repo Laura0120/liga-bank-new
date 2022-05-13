@@ -2,12 +2,13 @@ import React from "react";
 import { Route, Router as BrowserRouter } from "react-router-dom";
 
 import browserHistory from "../browser-history";
+import {MAIN_URL} from "../const";
 import Main from "./main";
 
 const App = () => {
   return (
     <BrowserRouter history={browserHistory}>
-      <Route exact path={`/`}>
+      <Route exact path={MAIN_URL}>
         <Main />
       </Route>
     </BrowserRouter>

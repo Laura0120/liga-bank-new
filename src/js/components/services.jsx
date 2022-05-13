@@ -71,6 +71,7 @@ const Services = () => {
   return (
     <section
       className="page-content__services services"
+      id="services"
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
@@ -80,7 +81,7 @@ const Services = () => {
       <div className="services__tabs services-tabs">
         {servicesArray.map((tab, index) => (
           <a
-            href={`#${tab}`}
+            href="#"
             className={`services-tabs__item
             services-tabs__item--${tab}
             ${currentTab === index ? `services-tabs__item--active` : ``}`}

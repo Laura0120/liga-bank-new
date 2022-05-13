@@ -10,7 +10,7 @@ const BankBranchs = () => {
   const MapMarker = () => <div className="bank-branchs__map-marker"></div>;
   const zoom = 4.6;
   return (
-    <section className="page-content__bank-branchs bank-branchs">
+    <section className="page-content__bank-branchs bank-branchs" id="bank-branchs">
       <h2>Отделения Лига Банка</h2>
       <div className="bank-branchs__map">
         <GoogleMapReact
