@@ -8,8 +8,7 @@
   }
 
   &--second {
-    background: linear-gradient(90deg, #dde2ec, #dde2ec),
-      linear-gradient(180deg, #f2f6ff, #eff9ff94);
+    background: linear-gradient(90deg, #dde2ec, #dde2ec), linear-gradient(180deg, #f2f6ff, #eff9ff94);
     background-repeat: no-repeat;
     background-size: 60% 100%, 50% 100%;
     background-position: left bottom, right bottom;
@@ -21,16 +20,21 @@
 }
 
 .slider__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   min-width: $mobile-width;
   max-width: $desktop-width-end;
   width: 100%;
   height: max-content;
+  min-height: 315px;
   margin: 0 auto;
   padding-bottom: 10px;
 
   background-repeat: no-repeat;
   background-position: 100% 59%;
+  background-size: cover;
 
   &--first {
     background-image: url("../../img/black-card-phone.png");
@@ -46,6 +50,8 @@
 }
 
 .slider__content {
+  transition: color 0.3s step-end,
+  width 0.3s step-end;
   width: max-content;
   min-height: 178px;
   padding-top: 38px;
@@ -180,6 +186,7 @@
 }
 
 @media (min-width: $desktop-width-start) {
+
   .slider--first {
     background: linear-gradient(
         180.24deg,

@@ -8,7 +8,7 @@ export const SERVICES = {
   insurance: `Страхование`,
   "online-services": `Онлайн-сервисы`,
 };
-export const INTERVAL_CHANGES_SLIDE = 4000;
+export const INTERVAL_CHANGES_SLIDE = 6000;
 export const TOUCH_SENSITIVITY = 20;
 export const CURRENCIES = [" рублей"];
 export const DURATION_UNITS = [" год", " года", " лет"];

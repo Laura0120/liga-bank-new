@@ -14,6 +14,7 @@ const customStyles = {
     fontWeight: 400,
     textAlign: "start",
     backgroundColor: "white",
+    cursor: 'pointer',
   }),
   control: (provided) => ({
     ...provided,
@@ -22,6 +23,7 @@ const customStyles = {
     border: "none",
     boxShadow: "none",
     paddingLeft: "3.7%",
+    cursor: 'pointer',
   }),
   menu: (provided) => ({
     ...provided,

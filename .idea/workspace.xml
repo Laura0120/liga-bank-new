@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e523b32-bda4-4129-8705-36d9f76e4aac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/select-credit-type.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/select-credit-type.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/sign-in.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/sign-in.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/social-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/social-list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/const.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/calculator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/calculator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/icons-of-tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/icons-of-tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/logo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/logo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/modal-sing-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/modal-sing-in.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/page-footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/page-footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/services-tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/services-tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/services.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/sign-in.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/sign-in.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/blocks/social-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/blocks/social-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/scaffolding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/scaffolding.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/variables.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="29ZRU90est0OXn0Nk6qkHiUwh5N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e523b32-bda4-4129-8705-36d9f76e4aac" name="Default Changelist" comment="" />
+      <created>1653318634459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653318634459</updated>
+      <workItem from="1653318635563" duration="12000" />
+      <workItem from="1653739553262" duration="280000" />
+      <workItem from="1653851425915" duration="618000" />
+      <workItem from="1653897929881" duration="1360000" />
+      <workItem from="1653932980642" duration="104000" />
+      <workItem from="1653933094889" duration="154000" />
+      <workItem from="1654520752053" duration="10212000" />
+      <workItem from="1654700114694" duration="245000" />
+      <workItem from="1657621481519" duration="1865000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="961" y="469" width="637" height="502" key="find.popup" timestamp="1654531327553">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="961" y="469" width="637" height="502" key="find.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1654531327553" />
+  </component>
+</project>

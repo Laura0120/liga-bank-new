@@ -4,7 +4,18 @@
 
   color: $dark-grey;
   text-decoration: none;
-}
+  transition: color 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+      opacity: 0.7;
+      color: blue;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
 
 .sing-in__icon {
   margin: 0;
@@ -21,8 +32,10 @@
 
 @media (min-width: $desktop-width-start) {
   .sing-in__title {
-    @include font(16px, 19px);
+    font-size: 16px;
+    line-height:19px;
   }
+
   .sing-in__icon {
     margin-right: 10px;
   }

@@ -15,6 +15,8 @@
   background-color: $light-lilac;
   background-repeat: no-repeat;
   background-position: 100% 39%;
+  transition: height 0.5s ease, background-position 0.3s step-end;
+  border-radius: 0 0 10px 10px;
 
   &--0 {
     background-image: url("../../img/contributions-phone.jpg");
@@ -70,8 +72,10 @@
 
 .services__title {
   margin: 0 17px 22px 0;
+
   @include font(16px, 22.5px, 500);
 
+  transition: width 0.5s ease;
   &--credits {
     margin-right: 35px;
   }

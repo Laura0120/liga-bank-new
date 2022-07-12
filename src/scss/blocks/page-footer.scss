@@ -63,9 +63,21 @@
     margin: 0;
   }
 }
+
 .page-footer__contacts a {
   @include font(15px, 19px, 500, $grey);
   text-decoration: none;
+
+  transition: color 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    color: blue;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 550px) {

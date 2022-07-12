@@ -3,6 +3,16 @@
   align-items: flex-end;
   text-decoration: none;
   height: min-content;
+
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .logo__wrapper {

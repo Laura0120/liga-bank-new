@@ -11,12 +11,14 @@ html {
 body {
   margin: 0;
   padding: 0;
+  transform: translateX(0);
 
   font-family: "Roboto", "Arial", sans-serif;
   @include font();
 
   &.no-scrolling {
     overflow: hidden;
+    padding-right: 15px;
   }
 }
 

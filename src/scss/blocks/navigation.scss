@@ -29,9 +29,15 @@
 .navigation__item a {
   color: $dark-grey;
   text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+    color: blue;
+  }
 
   &:active {
-    color: blue;
+    opacity: 1;
   }
 }
 

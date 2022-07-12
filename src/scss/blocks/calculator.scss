@@ -50,6 +50,8 @@
 }
 
 .calculator__input {
+  cursor: pointer;
+
   &--price {
     display: flex;
     justify-content: space-between;
